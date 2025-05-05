@@ -1,9 +1,14 @@
 <template>
   <MainLayout>
-    <div class="home-hero">
+    <div class="home-hero" data-aos="fade-up">
       <HomeHero />
     </div>
-    <div id="about-sect" class="home-about">
+    <div
+      id="about-sect"
+      class="home-about"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <AboutSection />
     </div>
   </MainLayout>
@@ -19,12 +24,4 @@ export default {
 };
 </script>
 
-<style>
-.home-hero {
-  margin-bottom: 5%;
-}
-
-.home-about {
-  margin-bottom: 5%;
-}
-</style>
+<style></style>

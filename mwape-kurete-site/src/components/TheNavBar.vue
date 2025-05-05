@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div class="navbar">
+  <div class="navbar" data-aos="fade-down">
     <div class="home"><a href="/">Home</a></div>
     <div class="work"><a href="/ui-work">UX/UI Work</a></div>
     <div class="work"><a href="/dev-work">Dev Work</a></div>

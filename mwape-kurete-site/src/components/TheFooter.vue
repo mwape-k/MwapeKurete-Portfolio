@@ -98,7 +98,7 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 188px;
+  gap: 150px;
 }
 .footer-cont {
   width: 100%;
