@@ -235,6 +235,14 @@ export default {
   overflow: hidden;
   max-height: 100%;
   object-fit: cover;
+
+  transition: all 500ms ease-in-out;
+}
+
+.multitudes-icon:hover {
+  rotate: -5deg;
+  box-shadow: rgba(36, 22, 4, 0.102) 0px 10px 50px;
+  cursor: pointer;
 }
 .a-single-page {
   align-self: stretch;
