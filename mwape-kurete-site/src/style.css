@@ -23,6 +23,7 @@ a:hover {
 .page-content {
   position: relative;
   min-height: 100vh;
+  margin-bottom: 25%;
   width: 100%;
 }
 
@@ -31,22 +32,22 @@ slot {
 }
 
 body {
-  /* background-image: url("./assets/texture.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top; */
   background-color: #1c1c1c !important;
   margin: 0;
   display: flex;
   place-items: center;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   min-width: 320px;
   min-height: 100vh;
 }
-
 #app {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -63,11 +64,17 @@ body {
   position: absolute;
   left: 0;
   right: 0;
+  width: 100% !important;
+  bottom: 0; /* Explicitly anchor to bottom */
+  z-index: 1; /* Higher than grain (optional) */
 }
 .main-page-layout {
   padding-top: 60px; /* Adjust based on navbar height */
 }
 
+.home-about {
+  padding-top: 5%;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

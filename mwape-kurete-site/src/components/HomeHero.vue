@@ -16,10 +16,10 @@ export default {
   <div class="hero-home" style="width: 100%; height: 100vh; position: relative">
     <div class="header1">
       <div class="mwape-kurete">Mwape Kurete</div>
-      <div class="portfolio">Portfoli</div>
+      <div class="portfolio">Portfolio</div>
     </div>
     <div class="explore-btn">
-      <div class="explore" @clcik="scrollToSection('about-sect')">
+      <div class="explore" @click="scrollToSection('about-sect')">
         Explore!!!
       </div>
     </div>
@@ -41,10 +41,10 @@ export default {
   transform-origin: 0 0;
 }
 .header1 {
-  margin-top: 15%;
+  margin-top: 10%;
   width: 100%;
   height: 318.4px;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 .explore {
   position: relative;
@@ -72,8 +72,9 @@ export default {
 
 .hero-home {
   width: 100%;
+  margin-bottom: 10%;
   position: relative;
-  height: 907px;
+  height: 800px;
   overflow: hidden;
   text-align: center;
   font-size: 128px;

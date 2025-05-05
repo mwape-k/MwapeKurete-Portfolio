@@ -89,12 +89,12 @@ export default {
 .me {
   position: absolute;
   top: 30.93px;
-  left: 484px;
+  margin-left: 60%;
   font-size: 128px;
   font-family: "Just Me Again Down Here";
   color: #fedcb5;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transform: rotate(-5.9deg);
+  rotate: -8deg;
   transform-origin: 0 0;
 }
 .header-2 {
@@ -138,8 +138,8 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 0px;
+  justify-content: center;
+  gap: 35%;
 }
 .want-to-see {
   top: 0px;
@@ -152,8 +152,8 @@ export default {
 }
 .yes-of-course {
   top: 35.03px;
-  margin-top: -15px;
-  margin-left: 35%;
+  margin-top: -10px;
+  margin-left: 20%;
   font-family: "Just Me Again Down Here";
   color: #fff2c3;
   display: flex;
@@ -166,16 +166,29 @@ export default {
 }
 .header-sml {
   top: 0px;
-  margin-left: 25%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35%;
   width: 100%;
   text-align: center;
   height: 65.4px;
 }
 .cta-section1 {
-  margin-top: 15%;
+  margin-top: 5%;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  border: 25px;
   width: 100%;
-  height: 180px;
+  height: 280px;
   font-size: 24px;
+
+  /* From https://css.glass */
+  background: rgba(56, 54, 54, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(56, 54, 54, 0.08);
 }
 .im-a-22-year-old {
   margin: 0;
