@@ -1,9 +1,14 @@
-<script setup>
-import Navbar from "./components/NavBar.vue";
-</script>
-
 <template>
-  <div class="container-fluid"></div>
+  <div>
+    <Navbar />
+    <router-view />
+  </div>
 </template>
 
-<style scoped></style>
+<script>
+import Navbar from "./components/TheNavBar.vue";
+
+export default {
+  components: { Navbar },
+};
+</script>
