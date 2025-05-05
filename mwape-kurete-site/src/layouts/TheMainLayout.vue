@@ -3,9 +3,14 @@
     <nav class="navbar-container">
       <NavBar />
     </nav>
-    <main class="container-fluid py-5">
+    <main
+      class="container-fluid page-content"
+      style="position: relative; min-height: 100vh"
+    >
       <!-- Injects page content here -->
-      <slot />
+      <div class="content-wrapper">
+        <slot />
+      </div>
     </main>
     <footer class="footer-container">
       <FooterComp />
@@ -24,3 +29,5 @@ export default {
   },
 };
 </script>
+
+<style></style>

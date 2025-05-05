@@ -1,14 +1,14 @@
 <template>
   <MainLayout>
-    <h1>Welcome to My Site 🎉</h1>
-    <p>This is the Home page content rendered inside the layout.</p>
+    <HomeHero />
   </MainLayout>
 </template>
 
 <script>
 import MainLayout from "../layouts/TheMainLayout.vue";
+import HomeHero from "../components/HomeHero.vue";
 
 export default {
-  components: { MainLayout },
+  components: { MainLayout, HomeHero },
 };
 </script>
