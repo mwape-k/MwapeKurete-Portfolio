@@ -1,10 +1,14 @@
-<script></script>
+<script>
+export default {
+  name: "TheNavBar",
+};
+</script>
 
 <template>
   <div class="navbar">
     <div class="home"><a href="/">Home</a></div>
-    <div class="work"><a href="">UX/UI Work</a></div>
-    <div class="work"><a href="">Dev Work</a></div>
+    <div class="work"><a href="/ui-work">UX/UI Work</a></div>
+    <div class="work"><a href="/dev-work">Dev Work</a></div>
   </div>
 </template>
 
@@ -31,9 +35,8 @@
   flex-shrink: 0;
 }
 .navbar {
-  position: relative;
+  top: 0;
   border-radius: 5px;
-  border: 1px solid #fff2c3;
   box-sizing: border-box;
   width: 100%;
   height: 50px;
@@ -41,10 +44,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 94px;
+  gap: 50px;
   text-align: center;
-  font-size: 20px;
+  font-size: 24px;
   color: #cf9048;
-  font-family: Quicksand;
+  font-family: "Just Me Again Down Here";
 }
 </style>
