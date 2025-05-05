@@ -2,7 +2,7 @@
 :root {
   line-height: 1.5;
   font-weight: 400;
-  background-color: #242424;
+  background-color: #1c1c1c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,11 +31,11 @@ slot {
 }
 
 body {
-  background-image: url("./assets/texture.jpg");
+  /* background-image: url("./assets/texture.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
-  background-color: #1e1e1e;
+  background-position: top; */
+  background-color: #1c1c1c !important;
   margin: 0;
   display: flex;
   place-items: center;

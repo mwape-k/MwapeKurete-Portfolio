@@ -1,6 +1,15 @@
 <script>
 export default {
   name: "HomeHero",
+
+  methods: {
+    scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    },
+  },
 };
 </script>
 <template>
@@ -10,7 +19,9 @@ export default {
       <div class="portfolio">Portfoli</div>
     </div>
     <div class="explore-btn">
-      <div class="explore">Explore!!!</div>
+      <div class="explore" @clcik="scrollToSection('about-sect')">
+        Explore!!!
+      </div>
     </div>
   </div>
 </template>
@@ -22,7 +33,7 @@ export default {
 }
 .portfolio {
   top: 127.47px;
-  left: 267px;
+  left: 70%;
   font-family: "Just Me Again Down Here";
   color: #fedcb5;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -30,39 +41,45 @@ export default {
   transform-origin: 0 0;
 }
 .header1 {
-  top: 143px;
-  left: calc(50% - 458px);
-  width: 917px;
+  margin-top: 15%;
+  width: 100%;
   height: 318.4px;
+  margin-bottom: 10%;
 }
 .explore {
   position: relative;
 }
 .explore-btn {
-  top: 663px;
-  left: 625px;
   border-radius: 4px;
-  width: 150px;
+  width: 100%;
   height: 56px;
-  display: flex;
-  flex-direction: row;
+  padding: 10px;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   box-sizing: border-box;
   text-align: center;
   font-size: 36px;
-  color: #347796;
+  color: #fedcb5;
   font-family: "Just Me Again Down Here";
 }
+
+.explore-btn:hover {
+  transition: all 3ms ease-in-out;
+  color: #d8675f;
+  rotate: -5deg;
+  cursor: pointer;
+}
+
 .hero-home {
   width: 100%;
   position: relative;
   height: 907px;
   overflow: hidden;
-  text-align: left;
+  text-align: center;
   font-size: 128px;
   color: #d8675f;
   font-family: "Paytone One";
+  display: block;
+  flex-direction: row;
 }
 </style>
