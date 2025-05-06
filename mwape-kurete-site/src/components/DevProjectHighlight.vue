@@ -38,7 +38,13 @@ export default {
               <div class="nd-year-project">2nd Year Project</div>
             </div>
             <div class="project-card">
-              <img class="multitudes-icon" alt="" src="../assets/staxs.jpg" />
+              <a
+                href="https://github.com/Mwape-Kurete/STAXS_T1P1"
+                class="project-link"
+                target="_blank"
+              >
+                <img class="multitudes-icon" alt="" src="../assets/staxs.jpg" />
+              </a>
               <div class="a-single-page">
                 A website that let users view stats on their favourite artists’
                 top ten tracks, and compare artist stats against one another.
@@ -53,7 +59,13 @@ export default {
               <div class="nd-year-project">2nd Year Project</div>
             </div>
             <div class="project-card">
-              <img class="multitudes-icon" alt="" src="../assets/addi.jpg" />
+              <a
+                href="https://github.com/Mwape-Kurete/ADDI"
+                class="project-link"
+                target="_blank"
+              >
+                <img class="multitudes-icon" alt="" src="../assets/addi.jpg" />
+              </a>
               <div class="a-responsive-web-container">
                 <span>
                   <p class="a-responsive-web">
@@ -72,7 +84,17 @@ export default {
               <div class="nd-year-project">2nd Year Project</div>
             </div>
             <div class="project-card">
-              <img class="multitudes-icon" alt="" src="../assets/rekeni.jpg" />
+              <a
+                href="https://github.com/Mwape-Kurete/Rekeni"
+                class="project-link"
+                target="_blank"
+              >
+                <img
+                  class="multitudes-icon"
+                  alt=""
+                  src="../assets/rekeni.jpg"
+                />
+              </a>
               <div class="a-single-page">
                 REKENI is a website that connects music lovers through album
                 recommendations & reviews. Discover new artists based on taste

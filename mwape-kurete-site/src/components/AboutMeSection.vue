@@ -43,10 +43,26 @@ export default {
               Have a Look at my official self promo here →
             </div>
             <div class="cv-link-wrapper">
-              <div class="cv-link">CV LINK</div>
+              <div class="cv-link">
+                <a
+                  href="../../public/CV/Mwape_Kurete_231115_CV.pdf"
+                  class="cv-link-inner"
+                  target="_blank"
+                >
+                  CV LINK
+                </a>
+              </div>
             </div>
             <div class="art-ig-account-wrapper">
-              <div class="cv-link">Art IG Account</div>
+              <div class="cv-link">
+                <a
+                  href="https://www.instagram.com/boxdcheesecake?igsh=MXFiZzMyM2Z3MHdjZQ%3D%3D&utm_source=qr"
+                  class="ig-link-inner"
+                  target="_blank"
+                >
+                  Art IG Account
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -63,13 +79,17 @@ export default {
             <div class="yes-btn">
               <div class="uxui-work">UX/UI Work</div>
               <div class="cta-btn">
-                <div class="check-it-out">check it out</div>
+                <div class="check-it-out">
+                  <a href="/ui-work" class="check-out"> check it out </a>
+                </div>
               </div>
             </div>
             <div class="yes-btn1">
               <div class="uxui-work">Dev Work</div>
               <div class="cta-btn">
-                <div class="check-it-out">check it out</div>
+                <div class="check-it-out">
+                  <a href="/dev-work" class="check-out"> check it out </a>
+                </div>
               </div>
             </div>
           </div>
@@ -272,5 +292,23 @@ export default {
   font-size: 96px;
   color: #d8675f;
   font-family: "Paytone One";
+}
+
+a.cv-link-inner {
+  color: #cf9048 !important;
+  font-family: "Just Me Again Down Here" !important;
+}
+
+a.cv-link-inner:hover {
+  color: #fedcb5 !important;
+}
+
+a.ig-link-inner {
+  color: #d8675f !important;
+  font-family: "Just Me Again Down Here" !important;
+}
+
+a.ig-link-inner:hover {
+  color: #fedcb5 !important;
 }
 </style>

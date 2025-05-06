@@ -8,19 +8,61 @@ export default {
     <div class="inner-footer-container">
       <div class="footer-links-left">
         <div class="some-important-links">Some Important Links</div>
-        <b class="linkedin">LinkedIn</b>
-        <b class="linkedin">Behance</b>
-        <b class="linkedin">GitHub</b>
-        <b class="linkedin">Instagram</b>
+        <b class="linkedin">
+          <a
+            href="http://www.linkedin.com/in/mwape-kurete-"
+            class="footer-link"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </b>
+        <b class="linkedin">
+          <a
+            href="https://www.behance.net/mwapekurete2"
+            class="footer-link"
+            target="_blank"
+          >
+            Behance
+          </a>
+        </b>
+        <b class="linkedin">
+          <a
+            href="https://github.com/Mwape-Kurete?tab=overview&from=2025-05-01&to=2025-05-06"
+            class="footer-link"
+            target="_blank"
+          >
+            GitHub
+          </a>
+        </b>
+        <b class="linkedin">
+          <a
+            href="https://www.instagram.com/boxdcheesecake?igsh=MXFiZzMyM2Z3MHdjZQ%3D%3D&utm_source=qr"
+            class="footer-link"
+            target="_blank"
+          >
+            Instagram
+          </a>
+        </b>
       </div>
-      <div class="footer-header">
+      <div class="footer-header" data-aos="fade-up">
         <div class="thank-you">THANK YOU!</div>
         <div class="hope-to-hear">Hope to hear from you!</div>
       </div>
       <div class="footer-links-right">
         <div class="some-important-links">Get In Touch @</div>
-        <b class="linkedin">Kurete.Mwape@gmail.com</b>
-        <b class="linkedin">+27 72 449 8646</b>
+        <b class="linkedin">
+          <a
+            href="mailto:kurete.mwape@gmail.com<"
+            class="footer-link"
+            target="_blank"
+          >
+            Kurete.Mwape@gmail.com
+          </a>
+        </b>
+        <b class="linkedin">
+          <a href="tel:+27724498646" class="footer-link"> +27 72 449 8646 </a>
+        </b>
       </div>
     </div>
   </div>
@@ -115,5 +157,14 @@ export default {
   color: #1e1e1e;
   font-family: Quicksand;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+a.footer-link {
+  font-size: 16px !important;
+  color: #1e1e1e !important;
+}
+
+a.footer-link:hover {
+  font-weight: 800;
 }
 </style>
