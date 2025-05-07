@@ -11,8 +11,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vue: ["vue", "vue-router"], // No pinia!
-          lodash: ["lodash"],
+          vue: ["vue", "vue-router"],
         },
       },
     },
