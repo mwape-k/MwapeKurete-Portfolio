@@ -2,7 +2,7 @@
 :root {
   line-height: 1.5;
   font-weight: 400;
-  background-color: #242424;
+  background-color: #1c1c1c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,23 +20,35 @@ a:hover {
   color: #d8675f !important;
 }
 
+.page-content {
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: 25%;
+  width: 100%;
+}
+
+slot {
+  width: 100%;
+}
+
 body {
-  background-image: url("./assets/texture.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-color: #1e1e1e;
+  background-color: #1c1c1c !important;
   margin: 0;
   display: flex;
+  flex-direction: column;
   place-items: center;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   min-width: 320px;
   min-height: 100vh;
 }
-
 #app {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -50,14 +62,20 @@ body {
 }
 
 .footer-container {
-  position: absolute;
-  left: 0;
-  right: 0;
+  position: relative; /* Changed from absolute */
+  width: 100%;
+  margin-top: 10rem; /* Creates consistent space */
+  z-index: 1;
+  background: #cf9048 /* your footer color */;
 }
 .main-page-layout {
   padding-top: 60px; /* Adjust based on navbar height */
 }
 
+.home-about {
+  padding-top: 5%;
+  margin-bottom: 15rem;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
