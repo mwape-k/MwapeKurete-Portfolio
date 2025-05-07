@@ -14,7 +14,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           // Split vendor chunks for better caching (optional but recommended)
-          vue: ["vue", "vue-router", "pinia"], // Group Vue-related dependencies
+          vue: ["vue", "vue-router"], // Group Vue-related dependencies
           lodash: ["lodash"], // Example: Group lodash separately
         },
       },
