@@ -1,7 +1,6 @@
 <script>
 export default {
   name: "UIProjectHighlight",
-
   methods: {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
@@ -15,27 +14,35 @@ export default {
 
 <template>
   <div class="container-fluid main-highlights">
+    <!-- Header Section -->
     <div class="row project-rows">
       <div
-        class="col-12 project-cols justify-content-center align-items-center"
+        class="col-12 project-cols d-flex justify-content-center align-items-center"
       >
-        <div class="header2">
-          <div class="some-of-my">Some of My favs</div>
+        <div class="header2" data-aos="fade down">
+          <div class="some-of-my">Some of My fav</div>
           <div class="uiux-projects">ui/ux projects</div>
         </div>
       </div>
     </div>
+
+    <!-- Project Cards -->
     <div class="row project-rows">
       <div
-        class="col-12 project-cols justify-content-center align-items-center"
+        class="col-12 project-cols d-flex justify-content-center align-items-center"
       >
         <div class="project-cards-outer">
-          <div class="project-card-container">
+          <!-- Card 1 -->
+          <div
+            class="project-card-container"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="project-header">
+              <div class="nd-year-project">2nd Year Project</div>
               <div class="click-the-card">
                 Click the Card to view the Case Study
               </div>
-              <div class="nd-year-project">2nd Year Project</div>
             </div>
             <div class="project-card">
               <a
@@ -55,12 +62,18 @@ export default {
               </div>
             </div>
           </div>
-          <div class="project-card-container">
+
+          <!-- Card 2 -->
+          <div
+            class="project-card-container"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="project-header">
+              <div class="nd-year-project">2nd Year Project</div>
               <div class="click-the-card">
                 Click the Card to view the Case Study
               </div>
-              <div class="nd-year-project">2nd Year Project</div>
             </div>
             <div class="project-card">
               <a
@@ -74,22 +87,24 @@ export default {
                   src="../assets/ecofest.png"
                 />
               </a>
-              <div class="a-responsive-web-container">
-                <span>
-                  <p class="a-responsive-web">
-                    A Responsive Web Activation for an already existing South
-                    African company.
-                  </p>
-                </span>
+              <div class="a-single-page">
+                A Responsive Web Activation for an existing South African
+                company.
               </div>
             </div>
           </div>
-          <div class="project-card-container">
+
+          <!-- Card 3 -->
+          <div
+            class="project-card-container"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="project-header">
+              <div class="nd-year-project">2nd Year Project</div>
               <div class="click-the-card">
                 Click the Card to view the Case Study
               </div>
-              <div class="nd-year-project">2nd Year Project</div>
             </div>
             <div class="project-card">
               <a
@@ -100,17 +115,19 @@ export default {
                 <img class="multitudes-icon" alt="" src="../assets/recs.png" />
               </a>
               <div class="a-single-page">
-                A Mobile application built for upcoming artists - discover your
-                new favs through genre based recommendations.
+                A Mobile app built for upcoming artists – discover your new favs
+                through genre-based recommendations.
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Skillset -->
     <div class="row project-rows">
       <div class="col-12 project-cols">
-        <div class="skillset-ux">
+        <div class="skillset-ux" data-aos="zoom-in-up">
           <div class="my-skillset">My Skillset</div>
           <div class="skills">
             <img class="figma-icon" alt="" src="../assets/UI/figma.svg" />
@@ -125,175 +142,203 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .project-rows {
-  width: 100% !important;
-  padding-bottom: 5%;
-}
-
-.project-rows > .col-12 {
   width: 100%;
+  padding-bottom: clamp(2rem, 5vw, 5rem);
 }
 
 .project-cols {
-  width: 100% !important;
+  width: 100%;
 }
-/*heading*/
+
+/* Header */
+.header2 {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(32px, 8vw, 96px);
+  color: #d8675f;
+  font-family: "Paytone One";
+  position: relative;
+  padding-bottom: 2rem;
+}
+
 .some-of-my {
-  position: absolute;
-  top: 0px;
   width: 100%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .uiux-projects {
-  position: absolute;
-  top: 66.69px;
   text-align: center;
-  right: 15%;
   font-family: "Just Me Again Down Here";
   color: #fedcb5;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transform: rotate(-5.9deg);
-  transform-origin: 0 0;
-}
-.header2 {
-  width: 100%;
-  position: relative;
-  height: 209.9px;
-  text-align: center;
-  font-size: 96px;
-  color: #d8675f;
-  font-family: "Paytone One";
+  margin-top: -10rem;
+  font-size: clamp(24px, 5vw, 48px);
 }
 
-/*Cards*/
-.click-the-card {
-  position: absolute;
-  top: 35.85px;
-  left: 0px;
-  transform: rotate(-2.7deg);
-  transform-origin: 0 0;
-}
-.nd-year-project {
-  position: absolute;
-  top: 0px;
-  left: 38.56px;
-  font-family: "Paytone One";
-  color: #d8675f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 176px;
-  height: 43px;
-}
-.project-header {
-  width: 252.1px;
-  position: relative;
-  height: 65.8px;
-}
-.multitudes-icon {
-  align-self: stretch;
-  position: relative;
-  border-radius: 20.83px;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-}
-.a-single-page {
-  align-self: stretch;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  flex-shrink: 0;
-}
-.project-card {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 26px;
-  font-size: 16px;
-  color: #fff;
-  font-family: Quicksand;
-}
-.project-card-container {
-  width: 335px;
-  height: 524px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-}
-.a-responsive-web {
-  margin: 0;
-}
-.a-responsive-web-container {
-  align-self: stretch;
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 50px;
-  flex-shrink: 0;
-}
+/* Project Cards */
 .project-cards-outer {
-  position: relative;
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 100px;
+  gap: clamp(2rem, 5vw, 4rem);
+  width: 100%;
+  padding: 0 1rem;
   text-align: center;
   font-size: 20px;
   color: #fedcb5;
   font-family: "Just Me Again Down Here";
 }
 
-/*SkillSet*/
-.my-skillset {
-  width: 130px;
-  position: relative;
+.project-card-container {
+  width: 100%;
+  max-width: 360px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  gap: 24px;
 }
-.figma-icon {
-  width: 58.4px;
-  position: relative;
-  height: 58.4px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.skills {
+
+.project-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 160px;
+  gap: 0.5rem;
+  font-family: "Paytone One";
+  color: #d8675f;
+  text-align: center;
 }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  color: #fff;
+  font-family: Quicksand;
+}
+
+.multitudes-icon {
+  width: 100%;
+  border-radius: 20.83px;
+  object-fit: cover;
+}
+
+.a-single-page {
+  padding: 0 1rem;
+}
+
+/* Skillset Section */
 .skillset-ux {
   margin-top: 5rem;
-  position: relative;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
   background-color: #1e1e1e;
-  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 20px 20px;
-  box-sizing: border-box;
-  gap: 56px;
+  gap: 2rem;
   text-align: center;
   font-size: 32px;
   color: #d8675f;
   font-family: "Paytone One";
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.figma-icon {
+  width: 58px;
+  height: 58px;
+}
+/* RESPONSIVE HEADER */
+.header2 {
+  width: 100%;
+  position: relative;
+  height: auto;
+  text-align: center;
+  font-size: clamp(48px, 8vw, 96px);
+  color: #d8675f;
+  font-family: "Paytone One";
+  padding: 2rem 1rem;
+}
+.uiux-projects {
+  position: relative;
+  text-align: center;
+  font-family: "Just Me Again Down Here";
+  color: #fedcb5;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-3deg);
+  font-size: clamp(24px, 4vw, 36px);
+  margin-top: 1rem;
+}
+
+.click-the-card {
+  font-family: "Just Me Again Down Here";
+  color: #fedcb5;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-2.9deg);
+  margin-top: -1.2rem;
+}
+
+/* CENTERED CARD LAYOUT */
+.project-cards-outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* RESPONSIVE CARDS */
+.project-card-container {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* HOVER ANIMATIONS */
+.project-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  background-color: #2c2c2c;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+}
+.project-card img {
+  transition: transform 0.5s ease;
+  border-radius: 16px;
+}
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* SKILLS WRAP */
+.techstack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.electron img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 </style>
