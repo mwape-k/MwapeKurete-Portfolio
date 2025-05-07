@@ -46,7 +46,7 @@ export default {
             </div>
             <div class="project-card">
               <a
-                href="https://www.behance.net/gallery/225296167/EcoFest-A-brand-activation"
+                href="https://www.behance.net/gallery/225295889/Multitudes-A-Jazz-Music-Festival"
                 class="project-card-links"
                 target="_blank"
               >
