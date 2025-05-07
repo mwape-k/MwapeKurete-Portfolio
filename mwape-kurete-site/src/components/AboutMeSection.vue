@@ -41,7 +41,7 @@ export default {
         </div>
         <div class="link-buttons">
           <a
-            href="../../public/CV/Mwape_Kurete_231115_CV.pdf"
+            href="/CV/Mwape_Kurete_231115_CV.pdf"
             class="cv-link"
             target="_blank"
           >
@@ -67,11 +67,15 @@ export default {
       <div class="cta-buttons">
         <div class="cta-option">
           <div class="work-type">UX/UI Work</div>
-          <a href="/ui-work" class="cta-button">check it out</a>
+          <router-link to="/ui-work" class="cta-button"
+            >check it out</router-link
+          >
         </div>
         <div class="cta-option">
           <div class="work-type">Dev Work</div>
-          <a href="/dev-work" class="cta-button">check it out</a>
+          <router-link to="/dev-work" class="cta-button"
+            >check it out</router-link
+          >
         </div>
       </div>
     </div>
