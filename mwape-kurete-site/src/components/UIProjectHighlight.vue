@@ -38,11 +38,17 @@ export default {
               <div class="nd-year-project">2nd Year Project</div>
             </div>
             <div class="project-card">
-              <img
-                class="multitudes-icon"
-                alt=""
-                src="../assets/multitudes.png"
-              />
+              <a
+                href="https://www.behance.net/gallery/225296167/EcoFest-A-brand-activation"
+                class="project-card-links"
+                target="_blank"
+              >
+                <img
+                  class="multitudes-icon"
+                  alt=""
+                  src="../assets/multitudes.png"
+                />
+              </a>
               <div class="a-single-page">
                 A Single Page site built for an immersive Jazz & Art Music
                 Festival.
@@ -57,7 +63,17 @@ export default {
               <div class="nd-year-project">2nd Year Project</div>
             </div>
             <div class="project-card">
-              <img class="multitudes-icon" alt="" src="../assets/ecofest.png" />
+              <a
+                href="https://www.behance.net/gallery/225296167/EcoFest-A-brand-activation"
+                class="project-card-links"
+                target="_blank"
+              >
+                <img
+                  class="multitudes-icon"
+                  alt=""
+                  src="../assets/ecofest.png"
+                />
+              </a>
               <div class="a-responsive-web-container">
                 <span>
                   <p class="a-responsive-web">
@@ -76,7 +92,13 @@ export default {
               <div class="nd-year-project">2nd Year Project</div>
             </div>
             <div class="project-card">
-              <img class="multitudes-icon" alt="" src="../assets/recs.png" />
+              <a
+                href="https://www.behance.net/gallery/225296361/Recs-Discover-underground-Artists"
+                class="project-card-links"
+                target="_blank"
+              >
+                <img class="multitudes-icon" alt="" src="../assets/recs.png" />
+              </a>
               <div class="a-single-page">
                 A Mobile application built for upcoming artists - discover your
                 new favs through genre based recommendations.

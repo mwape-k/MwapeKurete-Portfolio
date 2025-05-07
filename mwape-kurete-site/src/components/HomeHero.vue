@@ -1,7 +1,6 @@
 <script>
 export default {
   name: "HomeHero",
-
   methods: {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
@@ -12,75 +11,85 @@ export default {
   },
 };
 </script>
+
 <template>
-  <div class="hero-home" style="width: 100%; height: 100vh; position: relative">
-    <div class="header1">
+  <div class="hero-home">
+    <div class="header-container">
       <div class="mwape-kurete">Mwape Kurete</div>
       <div class="portfolio">Portfolio</div>
     </div>
-    <div class="explore-btn">
-      <div class="explore" @click="scrollToSection('about-sect')">
-        Explore!!!
-      </div>
+    <div class="explore-btn" @click="scrollToSection('about-sect')">
+      <div class="explore">Explore!!!</div>
     </div>
   </div>
 </template>
-<style>
-.mwape-kurete {
-  top: 0px;
-  left: calc(50% - 458.5px);
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.portfolio {
-  top: 127.47px;
-  left: 70%;
-  font-family: "Just Me Again Down Here";
-  color: #fedcb5;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transform: rotate(-5.9deg);
-  transform-origin: 0 0;
-}
-.header1 {
-  margin-top: 10%;
+
+<style scoped>
+.hero-home {
   width: 100%;
-  height: 318.4px;
-  margin-bottom: 5%;
-}
-.explore {
-  position: relative;
-}
-.explore-btn {
-  border-radius: 4px;
-  width: 100%;
-  height: 56px;
-  padding: 10px;
-  align-items: center;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  box-sizing: border-box;
+  align-items: center;
+  padding: 0 1rem;
+  overflow: hidden;
   text-align: center;
-  font-size: 36px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.mwape-kurete {
+  font-size: clamp(48px, 10vw, 128px);
+  color: #d8675f;
+  font-family: "Paytone One";
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  line-height: 0.9;
+  white-space: nowrap;
+}
+
+.portfolio {
+  font-size: clamp(32px, 8vw, 96px);
+  font-family: "Just Me Again Down Here";
+  color: #fedcb5;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  margin-top: -2rem; /* Increase negative margin */
+  transform: rotate(-5.9deg) translateY(-10%); /* Extra lift */
+}
+
+.explore-btn {
+  margin-top: 12rem;
+  font-size: clamp(24px, 5vw, 36px);
   color: #fedcb5;
   font-family: "Just Me Again Down Here";
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 4;
 }
 
 .explore-btn:hover {
-  transition: all 3ms ease-in-out;
   color: #d8675f;
-  rotate: -5deg;
-  cursor: pointer;
+  transform: rotate(-5deg) scale(1.05);
+  text-shadow: 0 0 10px rgba(216, 103, 95, 0.5);
 }
 
-.hero-home {
-  width: 100%;
-  margin-bottom: 10%;
-  position: relative;
-  height: 800px;
-  overflow: hidden;
-  text-align: center;
-  font-size: 128px;
-  color: #d8675f;
-  font-family: "Paytone One";
-  display: block;
-  flex-direction: row;
+/* Optional tweaks for smaller screens */
+@media (max-width: 480px) {
+  .portfolio {
+    transform: rotate(-5deg) scale(0.95);
+    margin-top: -0.8rem;
+  }
+
+  .explore-btn {
+    margin-top: 10rem;
+  }
 }
 </style>
