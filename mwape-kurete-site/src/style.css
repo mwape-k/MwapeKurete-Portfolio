@@ -35,6 +35,7 @@ body {
   background-color: #1c1c1c !important;
   margin: 0;
   display: flex;
+  flex-direction: column;
   place-items: center;
 }
 html,
@@ -61,13 +62,11 @@ body {
 }
 
 .footer-container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100% !important;
-  bottom: 0; /* Explicitly anchor to bottom */
-  z-index: 1; /* Higher than grain (optional) */
-  margin-top: 15rem;
+  position: relative; /* Changed from absolute */
+  width: 100%;
+  margin-top: 10rem; /* Creates consistent space */
+  z-index: 1;
+  background: #cf9048 /* your footer color */;
 }
 .main-page-layout {
   padding-top: 60px; /* Adjust based on navbar height */

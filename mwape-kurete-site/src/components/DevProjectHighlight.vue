@@ -185,7 +185,6 @@ export default {
 .project-rows {
   width: 100% !important;
   padding-bottom: 5%;
-  margin-left: 0.5rem;
 }
 
 .project-rows > .col-12 {
@@ -247,7 +246,6 @@ export default {
   width: 252.1px;
   position: relative;
   height: 65.8px;
-  margin-bottom: 3rem;
 }
 .multitudes-icon {
   align-self: stretch;
@@ -257,14 +255,6 @@ export default {
   overflow: hidden;
   max-height: 100%;
   object-fit: cover;
-
-  transition: all 500ms ease-in-out;
-}
-
-.multitudes-icon:hover {
-  rotate: -5deg;
-  box-shadow: rgba(36, 22, 4, 0.102) 0px 10px 50px;
-  cursor: pointer;
 }
 .a-single-page {
   align-self: stretch;
@@ -281,8 +271,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 20px;
-  gap: 55px;
+  gap: 26px;
   font-size: 16px;
   color: #fff;
   font-family: Quicksand;
@@ -294,7 +283,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 42px;
+  gap: 32px;
 }
 .a-responsive-web {
   margin: 0;
@@ -330,246 +319,27 @@ export default {
   justify-content: center;
   flex-shrink: 0;
 }
-.electron-child {
-  position: absolute;
-  height: 55.54%;
-  width: 51.25%;
-  top: 22.22%;
-  right: 24.38%;
-  bottom: 22.24%;
-  left: 24.37%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.electron {
-  width: 56px;
+.figma-icon {
+  width: 58.4px;
   position: relative;
-  border-radius: 16px;
-  background-color: #1e2235;
-  height: 56px;
-}
-.typescript-child {
-  position: absolute;
-  height: 55.54%;
-  width: 55.54%;
-  top: 22.22%;
-  right: 22.24%;
-  bottom: 22.24%;
-  left: 22.22%;
-  max-width: 100%;
+  height: 58.4px;
   overflow: hidden;
-  max-height: 100%;
+  flex-shrink: 0;
 }
-.docker-child {
-  position: absolute;
-  height: 39.82%;
-  width: 55.54%;
-  top: 30.07%;
-  right: 22.24%;
-  bottom: 30.11%;
-  left: 22.22%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.mysql-child {
-  position: absolute;
-  height: 55.36%;
-  width: 55.54%;
-  top: 22.32%;
-  right: 22.24%;
-  bottom: 22.32%;
-  left: 22.22%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.php-child {
-  position: absolute;
-  height: 28.21%;
-  width: 55.54%;
-  top: 35.92%;
-  right: 22.24%;
-  bottom: 35.86%;
-  left: 22.22%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.c-sharp-child {
-  position: absolute;
-  height: 55%;
-  width: 48.93%;
-  top: 22.5%;
-  right: 25.54%;
-  bottom: 22.5%;
-  left: 25.53%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.html5-child {
-  position: absolute;
-  height: 55.54%;
-  width: 48.93%;
-  top: 22.22%;
-  right: 25.57%;
-  bottom: 22.24%;
-  left: 25.5%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.vector-icon {
-  position: absolute;
-  height: 44.29%;
-  width: 55.54%;
-  top: 27.87%;
-  right: 22.24%;
-  bottom: 27.84%;
-  left: 22.22%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.git-child {
-  position: absolute;
-  height: 54.11%;
-  width: 55.54%;
-  top: 22.91%;
-  right: 22.24%;
-  bottom: 22.98%;
-  left: 22.22%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.mongo-child {
-  position: absolute;
-  height: 55.54%;
-  width: 25%;
-  top: 22.22%;
-  right: 37.48%;
-  bottom: 22.24%;
-  left: 37.52%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.vite-child {
-  position: absolute;
-  height: 55.54%;
-  width: 54.46%;
-  top: 22.22%;
-  right: 22.81%;
-  bottom: 22.24%;
-  left: 22.73%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.react-child {
-  position: absolute;
-  height: 60.36%;
-  width: 56.07%;
-  top: 19.78%;
-  right: 22%;
-  bottom: 19.86%;
-  left: 21.93%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.vs-child {
-  position: absolute;
-  height: 55%;
-  width: 55.54%;
-  top: 22.52%;
-  right: 22.24%;
-  bottom: 22.48%;
-  left: 22.22%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.jquery-child {
-  position: absolute;
-  height: 53.21%;
-  width: 55.54%;
-  top: 23.38%;
-  right: 22.24%;
-  bottom: 23.41%;
-  left: 22.22%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.css-child {
-  position: absolute;
-  height: 55.54%;
-  width: 48.93%;
-  top: 22.22%;
-  right: 25.56%;
-  bottom: 22.24%;
-  left: 25.51%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.figma-child {
-  position: absolute;
-  height: 55.54%;
-  width: 36.96%;
-  top: 22.22%;
-  right: 31.55%;
-  bottom: 22.24%;
-  left: 31.48%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.vue-child {
-  position: absolute;
-  height: 47.86%;
-  width: 55.54%;
-  top: 26.04%;
-  right: 22.24%;
-  bottom: 26.1%;
-  left: 22.22%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.node-child {
-  position: absolute;
-  height: 55.54%;
-  width: 50.36%;
-  top: 22.22%;
-  right: 24.85%;
-  bottom: 22.24%;
-  left: 24.79%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.techstack {
-  width: 1047px;
+.skills {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 9px 45px;
+  gap: 160px;
 }
 .skillset-ux {
   margin-top: 5rem;
-  width: 100%;
   position: relative;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   background-color: #1e1e1e;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;

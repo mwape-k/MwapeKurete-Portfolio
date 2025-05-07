@@ -182,7 +182,6 @@ export default {
   max-width: 900px;
   margin: 0 auto;
   border: 1px solid rgba(56, 54, 54, 0.08);
-  margin-bottom: 10rem;
 }
 
 .cta-header {
@@ -255,7 +254,9 @@ export default {
   .about-header {
     margin-bottom: 2rem;
   }
-
+  .about-me-cont {
+    padding-bottom: 6rem; /* Reduced from 15rem */
+  }
   .me {
     margin-left: 0.3em;
     transform: rotate(-8deg) scale(0.9);
@@ -290,7 +291,7 @@ export default {
 @media (max-width: 480px) {
   /* Mobile portrait adjustments */
   .about-me-cont {
-    padding-bottom: 12rem; /* Increased footer space */
+    padding-bottom: 8rem; /* Increased footer space */
   }
 
   .yes-of-course {
