@@ -143,6 +143,9 @@ export default {
 </template>
 
 <style scoped>
+.main-highlights {
+  z-index: 900;
+}
 .project-rows {
   width: 100%;
   padding-bottom: clamp(2rem, 5vw, 5rem);
