@@ -15,22 +15,35 @@ export default {
     </div>
 
     <!-- Bio Section -->
-    <div class="about-content">
-      <div class="about-blurb">
+    <div class="about-content text-center">
+      <div class="about-blur">
         <p class="bio-text">
-          I'm a 22-year-old South African UI/UX and full-stack development
-          student, proudly based in the vibrant city of Johannesburg.
+          I’m a 22-year-old UI/UX designer and aspiring full-stack developer
+          based in the vibrant city of Johannesburg, South Africa. Currently in
+          my third year of a BA in Creative Technology at The Open Window
+          Institute, I specialize in UI/UX Design and Interactive Development —
+          a path that allows me to merge my technical curiosity with a lifelong
+          creative passion.
         </p>
         <p class="bio-text">
-          I've always considered myself a creative at heart. Looking back, it's
-          clear I've had a "thing" for all things artistic and expressive.
+          Creativity has always been central to my identity. From composing my
+          first song in Grade 6 to designing my first clothing item in Grade 9,
+          I’ve consistently sought out expressive, hands-on ways to bring ideas
+          to life. This artistic foundation has shaped my design philosophy, one
+          rooted in visual storytelling, intentional interaction, and
+          human-centered design.
         </p>
         <p class="bio-text">
-          In Grade 6, I produced my first-ever song. By Grade 9, I had designed
-          and made my first clothing item — and from that point on, creativity
-          became my calling. I pursued art throughout high school, and today I'm
-          studying a degree that challenges me to be creative in more ways than
-          one.
+          With a strong background in traditional and digital art, I’ve
+          developed practical skills in tools like Figma, Photoshop, and Adobe
+          Illustrator. My experience ranges from crafting intuitive user
+          interfaces to developing full-stack web applications, always with an
+          emphasis on both form and function.
+          <br />
+          I’m driven by the challenge of solving problems through design, and
+          I’m passionate about creating digital experiences that are not only
+          functional and accessible but also emotionally resonant and
+          future-forward.
         </p>
       </div>
 
@@ -125,13 +138,14 @@ export default {
 .about-content {
   max-width: 900px;
   margin: 0 auto 4rem;
+  text-align: center;
 }
 
 .bio-text {
   font-size: clamp(16px, 2vw, 18px);
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  text-align: left;
+  text-align: justify;
 }
 
 /* Links Section */
@@ -289,6 +303,7 @@ export default {
 
   .about-content {
     margin-bottom: 3rem;
+    text-align: center;
   }
 }
 
