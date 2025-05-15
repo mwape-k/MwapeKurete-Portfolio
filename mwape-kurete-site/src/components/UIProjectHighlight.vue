@@ -316,7 +316,7 @@ export default {
 .project-card {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
-  background-color: #2c2c2c;
+  background-color: #141414;
   border-radius: 20px;
   padding: 1rem;
 }

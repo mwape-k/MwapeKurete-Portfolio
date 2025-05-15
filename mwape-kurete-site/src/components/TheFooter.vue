@@ -64,6 +64,9 @@ export default {
         <b class="linkedin">
           <a href="tel:+27724498646" class="footer-link"> +27 72 449 8646 </a>
         </b>
+        <br />
+        <br />
+        <b class="linkedin"> Made with 💖 & Vue ;) </b>
       </div>
     </div>
   </div>

@@ -46,13 +46,18 @@ export default {
 .navbar {
   position: relative;
   width: 100%;
-  min-height: 50px;
+  min-height: 60px;
+  min-height: 60px;
   display: flex;
   justify-content: center; /* Changed from space-between */
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
-  background: #1e1e1e;
+  background: rgba(33, 33, 33, 0.528);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 

@@ -193,9 +193,11 @@ export default {
 
 /* CTA Section */
 .cta-section {
-  background: rgba(56, 54, 54, 0.26);
+  background: rgba(33, 33, 33, 0.528);
   border-radius: 16px;
-  backdrop-filter: blur(9px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
   padding: 2rem;
   max-width: 900px;
   margin: 0 auto;
