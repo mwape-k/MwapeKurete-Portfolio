@@ -1,3 +1,7 @@
+<script setup>
+import { onMounted } from "vue";
+</script>
+
 <template>
   <div class="grainy-app">
     <transition name="zoom-fade" mode="out-in">
@@ -6,14 +10,16 @@
   </div>
 </template>
 
-<style>
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Space+Grotesk:wght@300..700&display=swap");
+
 .grainy-app {
   position: relative;
   min-height: 100vh;
   background: linear-gradient(
     180deg,
     rgba(25, 25, 25, 1) 0%,
-    rgba(42, 31, 66, 1) 89%
+    rgb(14, 14, 15) 89%
   );
   overflow: hidden;
 }
@@ -30,11 +36,11 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("./assets/overlay.png"); /* Transparent or grayish PNG */
+  background-image: url("./assets/texture2.png"); /* Transparent or grayish PNG */
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.2;
-  filter: contrast(120%) brightness(90%);
+  opacity: 0.3;
+  /* filter: contrast(120%) brightness(90%); */
   pointer-events: none;
   z-index: 0;
 }

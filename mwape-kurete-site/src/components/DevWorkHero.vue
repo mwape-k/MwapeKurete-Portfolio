@@ -50,44 +50,65 @@ export default {
 
 .mwape-kurete {
   font-size: clamp(48px, 10vw, 128px);
-  color: #d8675f;
-  font-family: "Paytone One";
+  color: #fff;
+  font-family: "Anton", sans-serif;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   line-height: 0.9;
   white-space: nowrap;
 }
 
 .portfolio {
-  font-size: clamp(32px, 8vw, 96px);
-  font-family: "Just Me Again Down Here";
-  color: #fedcb5;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: clamp(12px, 8vw, 48px);
+  font-family: "Space Grotesk", sans-serif;
+  color: #212121;
+  background-color: #e9a701;
+  padding: 0 2rem;
+  width: 40%;
   white-space: nowrap;
-  margin-top: -2rem; /* Increase negative margin */
-  transform: rotate(-5.9deg) translateY(-10%); /* Extra lift */
+  margin-top: 2.5rem; /* Increase negative margin */
+  transform: translateY(-18%); /* Extra lift */
 }
 
 .explore-btn {
   margin-top: 12rem;
-  font-size: clamp(24px, 5vw, 36px);
-  color: #fedcb5;
-  font-family: "Just Me Again Down Here";
+  font-size: clamp(10px, 5vw, 20px);
+  color: #212121;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #fff;
+  padding: 0 3rem;
+  font-weight: 200;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 4;
 }
 
 .explore-btn:hover {
-  color: #d8675f;
+  background-color: rgba(233, 167, 1, 0.228);
+  color: #fff;
+
   transform: rotate(-5deg) scale(1.05);
-  text-shadow: 0 0 10px rgba(216, 103, 95, 0.5);
 }
 
 /* Optional tweaks for smaller screens */
 @media (max-width: 480px) {
   .portfolio {
-    transform: rotate(-5deg) scale(0.95);
-    margin-top: -0.8rem;
+    transform: scale(0.95);
+    margin-top: 1rem;
+    width: 60%;
+    font-size: 20px;
+  }
+
+  .explore-btn {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    transform: scale(0.95);
+    margin-top: 1rem;
+    width: 60%;
+    font-size: 32px;
   }
 
   .explore-btn {

@@ -54,6 +54,7 @@ export default {
   padding: 0 20px;
   box-sizing: border-box;
   background: rgba(33, 33, 33, 0.528);
+  color: #fff !important;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10.3px);
@@ -63,31 +64,42 @@ export default {
 
 .nav-items {
   display: flex;
-  gap: clamp(15px, 3vw, 50px);
+  gap: clamp(10px, 3vw, 120px);
   max-width: 1200px; /* Or your preferred max width */
   margin: 0 auto;
 }
 
 .nav-item {
   font-weight: 600;
-  font-size: clamp(18px, 4vw, 24px);
-  font-family: "Just Me Again Down Here";
+  font-size: clamp(12px, 4vw, 16px);
+  font-family: "Space Grotesk", sans-serif;
+  color: #fff !important;
+  font-weight: 100;
   padding: 10px 0;
+  transition: all 3ms ease-in;
 }
 
 .nav-item router-link {
   text-decoration: none;
-  color: #cf9048;
+  color: #fff !important;
   transition: all 0.3s ease;
 }
 
 .home router-link {
-  color: #d8675f;
+  color: #fff !important;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #fff !important;
+  transition: all 0.3s ease;
 }
 
 .nav-item a:hover {
-  transform: scale(1.05);
-  text-shadow: 0 0 5px rgba(207, 144, 72, 0.3);
+  font-weight: 600;
+  background-color: #e9a701;
+  color: #212121 !important;
+  padding: 0.2rem 0.6rem;
 }
 
 /* Burger Menu (Hidden by Default) */
@@ -110,7 +122,7 @@ export default {
   display: block;
   width: 100%;
   height: 3px;
-  background: #d8675f;
+  background: #e9a701;
   border-radius: 2px;
   transition: all 0.3s ease;
 }

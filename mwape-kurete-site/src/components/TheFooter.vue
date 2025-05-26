@@ -75,7 +75,7 @@ export default {
 <style>
 .footer-cont {
   width: 100%;
-  background-color: #cf9048;
+  background-color: #212121;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,8 +84,8 @@ export default {
   box-sizing: border-box;
   text-align: center;
   font-size: 16px;
-  color: #1e1e1e;
-  font-family: Quicksand;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
@@ -101,11 +101,15 @@ export default {
 
 .some-important-links {
   position: relative;
-  font-family: "Paytone One";
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  color: #212121;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 23px;
+  height: 19px;
+  padding: 0 10px;
   margin-bottom: 10px;
 }
 
@@ -120,6 +124,7 @@ export default {
 
 .footer-links-left,
 .footer-links-right {
+  color: #fff;
   flex: 1;
   min-width: 200px;
   display: flex;
@@ -136,7 +141,8 @@ export default {
   position: relative;
   height: auto;
   font-size: clamp(24px, 4vw, 48px);
-  font-family: "Paytone One";
+  font-family: "Anton";
+  color: #e9a701;
   padding: 20px;
 }
 
@@ -150,26 +156,31 @@ export default {
 }
 
 .hope-to-hear {
-  font-family: "Just Me Again Down Here";
-  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 28px;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: auto;
-  transform: rotate(-7.7deg);
+  transform: rotate(-7deg);
   transform-origin: 0 0;
 }
 
 a.footer-link {
   font-size: 16px !important;
-  color: #1e1e1e !important;
+  color: white !important;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 a.footer-link:hover {
-  font-weight: 800;
+  font-weight: 600;
+  background-color: #e9a701;
+  color: #212121 !important;
+  padding: 0.2rem 0.6rem;
+  transform-origin: left;
 }
 
 /* Medium screens */
@@ -215,6 +226,7 @@ a.footer-link:hover {
 
   .hope-to-hear {
     transform: rotate(-5deg);
+    font-size: 16px;
   }
 }
 </style>
