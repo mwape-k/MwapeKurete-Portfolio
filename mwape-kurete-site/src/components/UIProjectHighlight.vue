@@ -46,7 +46,7 @@ export default {
             </div>
             <div class="project-card">
               <a
-                href="https://www.behance.net/gallery/225296167/EcoFest-A-brand-activation"
+                href="https://www.behance.net/gallery/225295889/Multitudes-A-Jazz-Music-Festival"
                 class="project-card-links"
                 target="_blank"
               >
@@ -143,6 +143,9 @@ export default {
 </template>
 
 <style scoped>
+.main-highlights {
+  z-index: 900;
+}
 .project-rows {
   width: 100%;
   padding-bottom: clamp(2rem, 5vw, 5rem);
@@ -313,7 +316,7 @@ export default {
 .project-card {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
-  background-color: #2c2c2c;
+  background-color: #141414;
   border-radius: 20px;
   padding: 1rem;
 }

@@ -29,13 +29,13 @@ export default {
     <!-- Navigation Items -->
     <div :class="{ 'nav-items': true, open: isMenuOpen }">
       <div class="nav-item home" @click="closeMenu">
-        <a href="/">Home</a>
+        <router-link to="/">Home</router-link>
       </div>
       <div class="nav-item work" @click="closeMenu">
-        <a href="/ui-work">UX/UI Work</a>
+        <router-link to="/ui-work">UX/UI Work</router-link>
       </div>
       <div class="nav-item work" @click="closeMenu">
-        <a href="/dev-work">Dev Work</a>
+        <router-link to="/dev-work">Dev Work</router-link>
       </div>
     </div>
   </div>
@@ -46,13 +46,18 @@ export default {
 .navbar {
   position: relative;
   width: 100%;
-  min-height: 50px;
+  min-height: 60px;
+  min-height: 60px;
   display: flex;
   justify-content: center; /* Changed from space-between */
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
-  background: #1e1e1e;
+  background: rgba(33, 33, 33, 0.528);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -70,13 +75,13 @@ export default {
   padding: 10px 0;
 }
 
-.nav-item a {
+.nav-item router-link {
   text-decoration: none;
   color: #cf9048;
   transition: all 0.3s ease;
 }
 
-.home a {
+.home router-link {
   color: #d8675f;
 }
 
