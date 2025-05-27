@@ -135,6 +135,17 @@ export default {
 }
 
 /* Bio Content */
+.about-blur {
+  background: rgba(33, 33, 33, 0.528);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  padding: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(56, 54, 54, 0.08);
+}
+
 .about-content {
   max-width: 900px;
   margin: 0 auto 4rem;
