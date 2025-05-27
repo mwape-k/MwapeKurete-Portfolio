@@ -61,7 +61,7 @@ export default {
   font-size: clamp(12px, 8vw, 48px);
   font-family: "Space Grotesk", sans-serif;
   color: #212121;
-  background-color: #e9a701;
+  background-color: #4e8359;
   padding: 0 2rem;
   width: 40%;
   white-space: nowrap;
@@ -107,7 +107,7 @@ export default {
   .portfolio {
     transform: scale(0.95);
     margin-top: 1rem;
-    width: 60%;
+    width: 70%;
     font-size: 32px;
   }
 

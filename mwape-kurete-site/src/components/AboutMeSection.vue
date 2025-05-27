@@ -9,7 +9,7 @@ export default {
     <!-- Header Section -->
     <div class="about-header">
       <div class="header-content">
-        <div class="a-bit-about">A Bit About</div>
+        <div class="a-bit-about">A BIT ABOUT</div>
         <div class="me">Me!!!</div>
       </div>
     </div>
@@ -75,7 +75,7 @@ export default {
     <div class="cta-section">
       <div class="cta-header">
         <div class="want-to-see">Want to See Some of My Work?</div>
-        <div class="yes-of-course">Yes, Of Course!!</div>
+        <div class="yes-of-course">[ <small>Yes, Of Course!!</small> ]</div>
       </div>
       <div class="cta-buttons">
         <div class="cta-option">
@@ -99,7 +99,7 @@ export default {
 /* Base Styles */
 .about-me-cont {
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 1rem 0;
   color: #fff;
   font-family: Quicksand;
 }
@@ -116,22 +116,22 @@ export default {
 }
 
 .a-bit-about {
-  font-size: clamp(48px, 8vw, 96px);
-  color: #d8675f;
-  font-family: "Paytone One";
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: clamp(48px, 8vw, 128px);
+  color: #fff;
+  font-family: "Anton", sans-serif;
   line-height: 0.9;
 }
 
 .me {
-  font-size: clamp(64px, 10vw, 128px);
-  font-family: "Just Me Again Down Here";
-  color: #fedcb5;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transform: rotate(-8deg);
+  font-size: clamp(16px, 10vw, 48px);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  color: #212121;
   display: inline-block;
-  margin-left: 0.5em;
-  transform-origin: left center;
+  background-color: #65a3d4;
+  width: 100%;
+  height: 4rem;
+  transform-origin: center;
 }
 
 /* Bio Content */
@@ -156,9 +156,10 @@ export default {
 
 .have-a-look {
   font-size: clamp(16px, 2vw, 18px);
-  font-family: "Paytone One";
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #d8675f;
+  color: #fff;
 }
 
 .link-buttons {
@@ -170,36 +171,36 @@ export default {
 
 .cv-link,
 .ig-link {
-  font-family: "Just Me Again Down Here";
-  font-size: clamp(18px, 3vw, 24px);
+  font-family: "Space Grotesk", sans-serif;
+  color: #fff !important;
+  font-size: clamp(12px, 3vw, 16px);
   padding: 0.5rem 1rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .cv-link {
-  color: #cf9048;
+  color: #fff;
 }
 
 .ig-link {
-  color: #d8675f;
+  color: #fff;
 }
 
 .cv-link:hover,
 .ig-link:hover {
-  color: #fedcb5;
-  transform: scale(1.05);
+  background-color: #65a4d4;
+  color: #212121 !important;
 }
 
 /* CTA Section */
 .cta-section {
   background: rgba(33, 33, 33, 0.528);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10.3px);
   -webkit-backdrop-filter: blur(10.3px);
   padding: 2rem;
-  max-width: 900px;
+  max-width: 100vw;
   margin: 0 auto;
   border: 1px solid rgba(56, 54, 54, 0.08);
 }
@@ -213,15 +214,14 @@ export default {
 .want-to-see {
   font-size: clamp(20px, 3vw, 24px);
   margin-bottom: 0.5rem;
-  font-family: "Paytone One";
-  color: #d8675f;
+  font-family: "Anton", sans-serif;
+  color: #65a3d4;
 }
 
 .yes-of-course {
-  font-family: "Just Me Again Down Here";
-  color: #fff2c3;
-  font-size: clamp(24px, 4vw, 32px);
-  transform: rotate(-9.2deg);
+  font-family: "Space Grotesk";
+  color: #fff;
+  font-size: clamp(16px, 4vw, 20px);
   display: inline-block;
 }
 
@@ -239,22 +239,22 @@ export default {
 .work-type {
   font-size: clamp(18px, 2.5vw, 20px);
   margin-bottom: 0.5rem;
-  font-family: "Paytone One";
-  color: #d8675f;
+  font-family: "Anton";
+  color: #fff;
 }
 
 .cta-button {
-  font-family: "Just Me Again Down Here";
-  color: #fedcb5;
-  font-size: clamp(16px, 2vw, 18px);
+  font-family: "Space Grotesk", sans-serif;
+  color: #fff !important;
+  font-size: clamp(12px, 2vw, 16px);
   padding: 0.5rem 1rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-  color: #d8675f;
-  transform: rotate(-5deg) scale(1.05);
+  color: #fff !important;
+  background-color: #65a4d46f;
 }
 
 /* Enhanced Responsive Adjustments */
@@ -265,7 +265,6 @@ export default {
   }
 
   .me {
-    transform: rotate(-8deg) scale(0.95);
   }
 }
 
@@ -278,8 +277,6 @@ export default {
     padding-bottom: 6rem; /* Reduced from 15rem */
   }
   .me {
-    margin-left: 0.3em;
-    transform: rotate(-8deg) scale(0.9);
   }
 
   .link-buttons {
@@ -300,7 +297,7 @@ export default {
   }
 
   .me {
-    font-size: clamp(48px, 12vw, 64px);
+    font-size: clamp(22px, 12vw, 36px);
   }
 
   .about-content {
@@ -316,11 +313,16 @@ export default {
   }
 
   .yes-of-course {
-    transform: rotate(-9.2deg) scale(0.85);
+    font-size: 16px;
   }
 
   .cta-buttons {
     gap: 1.5rem;
+  }
+
+  .me {
+    font-size: 16px;
+    height: 1.5rem;
   }
 }
 
@@ -332,11 +334,11 @@ export default {
 
   .me {
     margin-left: 0.2em;
-    transform: rotate(-8deg) scale(0.8);
+    font-size: 12px;
+    height: 1rem;
   }
 
   .bio-text {
-    font-size: clamp(15px, 3.5vw, 16px);
   }
 }
 
@@ -348,19 +350,6 @@ export default {
 
   .about-header {
     margin-bottom: 1.5rem;
-  }
-}
-
-/* Animation stays the same */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 </style>

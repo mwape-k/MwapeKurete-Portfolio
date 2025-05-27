@@ -207,12 +207,14 @@ export default {
 /* Header */
 .header2 {
   width: 100%;
-  text-align: center;
-  font-size: clamp(32px, 8vw, 96px);
-  color: #d8675f;
-  font-family: "Paytone One";
   position: relative;
-  padding-bottom: 2rem;
+  height: auto;
+  text-align: center;
+  font-size: clamp(48px, 8vw, 96px);
+  color: #fff;
+  font-family: "Anton";
+  padding: 2rem 1rem;
+  line-height: 1.5;
 }
 
 .some-of-my {
@@ -230,8 +232,8 @@ export default {
   padding: 0 1rem;
   text-align: center;
   font-size: 20px;
-  color: #fedcb5;
-  font-family: "Just Me Again Down Here";
+  color: #fff;
+  font-family: "Space Grotesk";
 }
 
 .project-card-container {
@@ -248,8 +250,9 @@ export default {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  font-family: "Paytone One";
-  color: #c04e45;
+  font-family: "Anton";
+  margin-bottom: 1rem;
+  color: #fff;
   text-align: center;
 }
 
@@ -260,7 +263,8 @@ export default {
   gap: 20px;
   font-size: 16px;
   color: #fff;
-  font-family: Quicksand;
+  line-height: 1.2;
+  font-family: "Space Grotesk";
 }
 
 .multitudes-icon {
@@ -276,18 +280,22 @@ export default {
 /* Skillset Section */
 .skillset-ux {
   margin-top: 5rem;
-  background-color: #1e1e1e;
-  border-radius: 25px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: rgba(33, 33, 33, 0.528);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
   padding: 2rem;
+  max-width: 100vw;
+  margin: 0 auto;
+  border: 1px solid rgba(56, 54, 54, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   text-align: center;
   font-size: 32px;
-  color: #d8675f;
-  font-family: "Paytone One";
+  color: #4e8359;
+  font-family: "Anton";
 }
 
 .skills {
@@ -303,33 +311,22 @@ export default {
 }
 
 /* RESPONSIVE HEADER */
-.header2 {
-  width: 100%;
-  position: relative;
-  height: auto;
-  text-align: center;
-  font-size: clamp(48px, 8vw, 96px);
-  color: #d8675f;
-  font-family: "Paytone One";
-  padding: 2rem 1rem;
-}
+
 .uiux-projects {
-  position: relative;
   text-align: center;
-  font-family: "Just Me Again Down Here";
-  color: #fedcb5;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transform: rotate(-3deg);
-  font-size: clamp(24px, 4vw, 36px);
-  margin-top: -1rem;
+  font-family: "Space Grotesk";
+  color: #212121;
+  width: 100%;
+  background-color: #4e8359;
+  font-size: clamp(16px, 5vw, 28px);
 }
 
 .click-the-card {
-  font-family: "Just Me Again Down Here";
-  color: #fedcb5;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transform: rotate(-2.9deg);
-  margin-top: -1.2rem;
+  font-family: "Space Grotesk";
+  font-weight: 400 !important;
+  font-size: medium;
+  color: #fff;
+  background-color: #ffffff77 !important;
 }
 
 /* CENTERED CARD LAYOUT */
