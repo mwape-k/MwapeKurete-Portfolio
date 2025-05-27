@@ -24,27 +24,37 @@ import { onMounted } from "vue";
   overflow: hidden;
 }
 
-.grainy-app > * {
+.grainy-app {
   position: relative;
-  z-index: 1; /* Ensure children are layered above */
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgb(14, 14, 15) 89%
+  );
+  overflow-x: hidden;
 }
 
 .grainy-app::before {
   content: "";
-  position: fixed;
+  position: absolute; /* Changed from fixed to absolute */
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("./assets/texture2.png"); /* Transparent or grayish PNG */
+  width: 100%;
+  height: 100%; /* Exact height of your image */
+  background-image: url("./assets/texture2.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; /* Show entire image without cropping */
+  background-position: top center;
   opacity: 0.3;
-  /* filter: contrast(120%) brightness(90%); */
   pointer-events: none;
   z-index: 0;
 }
 
+.grainy-app > * {
+  position: relative;
+  z-index: 1;
+}
 /* 🔥 Zoom + Fade Page Transition */
 .zoom-fade-enter-active,
 .zoom-fade-leave-active {

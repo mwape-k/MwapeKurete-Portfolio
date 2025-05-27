@@ -80,7 +80,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 35px 20px;
+  margin-top: -5%;
+  padding: 95px 20px;
   box-sizing: border-box;
   text-align: center;
   font-size: 16px;

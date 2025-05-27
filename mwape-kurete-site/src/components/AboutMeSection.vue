@@ -148,6 +148,17 @@ export default {
   text-align: justify;
 }
 
+.about-blur {
+  background: rgba(33, 33, 33, 0.528);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  padding: 2rem;
+  max-width: 100vw;
+  margin: 0 auto;
+  border: 1px solid rgba(56, 54, 54, 0.08);
+}
+
 /* Links Section */
 .links-section {
   margin-top: 3rem;
@@ -172,25 +183,28 @@ export default {
 .cv-link,
 .ig-link {
   font-family: "Space Grotesk", sans-serif;
-  color: #fff !important;
+
   font-size: clamp(12px, 3vw, 16px);
   padding: 0.5rem 1rem;
   text-decoration: none;
+  color: #212121 !important;
+  font-weight: 500;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #fff;
+  padding: 0 3rem;
+  font-weight: 200;
   transition: all 0.3s ease;
-}
-
-.cv-link {
-  color: #fff;
-}
-
-.ig-link {
-  color: #fff;
 }
 
 .cv-link:hover,
 .ig-link:hover {
-  background-color: #65a4d4;
-  color: #212121 !important;
+  background-color: rgba(233, 167, 1, 0.228);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  color: #fff !important;
+
+  transform: rotate(-5deg) scale(1.05);
 }
 
 /* CTA Section */
