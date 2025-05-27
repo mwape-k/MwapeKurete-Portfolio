@@ -1,11 +1,28 @@
 <script setup>
-import { onMounted } from "vue";
+import { ref, onMounted, nextTick } from "vue";
+import TheLoader from "./components/TheLoader.vue";
+
+const loading = ref(true);
+
+onMounted(() => {
+  setTimeout(async () => {
+    loading.value = false;
+    await nextTick(); // wait until DOM updates
+    window.dispatchEvent(new Event("scroll")); // triggers any scroll-based effects
+  }, 4000);
+});
 </script>
 
 <template>
   <div class="grainy-app">
-    <transition name="zoom-fade" mode="out-in">
-      <router-view :key="$route.fullPath" />
+    <!-- Preloader -->
+    <transition name="fade">
+      <TheLoader v-if="loading" />
+    </transition>
+
+    <!-- Main App -->
+    <transition name="zoom-fade" mode="out-in" appear>
+      <router-view v-if="!loading" :key="$route.fullPath" />
     </transition>
   </div>
 </template>
@@ -58,17 +75,41 @@ import { onMounted } from "vue";
 /* 🔥 Zoom + Fade Page Transition */
 .zoom-fade-enter-active,
 .zoom-fade-leave-active {
-  transition: opacity 0.6s cubic-bezier(0.77, 0, 0.175, 1),
-    transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  /* transition: opacity 0.6s cubic-bezier(0.77, 0, 0.175, 1),
+    transform 0.6s cubic-bezier(0.77, 0, 0.175, 1); */
 }
 
-.zoom-fade-enter-from {
-  opacity: 0;
-  transform: scale(1.015);
+/* 🔄 PURE FADE FOR MAIN APP TRANSITION */
+.zoom-fade-enter-active,
+.zoom-fade-leave-active {
+  transition: opacity 0.8s ease;
 }
 
+.zoom-fade-enter-from,
 .zoom-fade-leave-to {
   opacity: 0;
-  transform: scale(0.985);
+}
+
+.zoom-fade-enter-to,
+.zoom-fade-leave-from {
+  opacity: 1;
+}
+
+.fade-enter-active {
+  transition: opacity 0.8s ease, transform 1s ease;
+}
+.fade-enter-from {
+  opacity: 0;
+  transform: scale(1.02) translateY(10px);
+}
+
+.fade-leave-active {
+  transition: opacity 0.8s ease, transform 1s ease;
+  pointer-events: none;
+}
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0.98) translateY(-10px);
 }
 </style>

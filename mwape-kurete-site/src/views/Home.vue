@@ -1,6 +1,6 @@
 <template>
   <MainLayout>
-    <div class="home-hero" data-aos="fade-up">
+    <div class="home-hero">
       <HomeHero />
     </div>
     <div
