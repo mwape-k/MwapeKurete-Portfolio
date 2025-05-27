@@ -276,7 +276,7 @@ export default {
   font-weight: 400 !important;
   font-size: medium;
   color: #fff;
-  background-color: #ffffff77;
+  background-color: #ffffff77 !important;
 }
 
 /* CENTERED CARD LAYOUT */
