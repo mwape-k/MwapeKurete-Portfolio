@@ -124,7 +124,7 @@ export default {
 
 .me {
   font-size: clamp(16px, 10vw, 48px);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   font-weight: 600;
   color: #212121;
   display: inline-block;
@@ -178,7 +178,7 @@ export default {
 
 .have-a-look {
   font-size: clamp(16px, 2vw, 18px);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: #fff;
@@ -193,14 +193,14 @@ export default {
 
 .cv-link,
 .ig-link {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
 
   font-size: clamp(12px, 3vw, 16px);
   padding: 0.5rem 1rem;
   text-decoration: none;
   color: #212121 !important;
   font-weight: 500;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   background-color: #fff;
   padding: 0 3rem;
   font-weight: 200;
@@ -244,7 +244,7 @@ export default {
 }
 
 .yes-of-course {
-  font-family: "Space Grotesk";
+  font-family: "Darker Grotesque";
   color: #fff;
   font-size: clamp(16px, 4vw, 20px);
   display: inline-block;
@@ -269,7 +269,7 @@ export default {
 }
 
 .cta-button {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   color: #fff !important;
   font-size: clamp(12px, 2vw, 16px);
   padding: 0.5rem 1rem;

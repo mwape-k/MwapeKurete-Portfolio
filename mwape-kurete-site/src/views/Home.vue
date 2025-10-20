@@ -9,7 +9,7 @@
       data-aos="fade-up"
       data-aos-duration="1000"
     >
-      <AboutSection />
+      <AboutMeComponent />
     </div>
   </MainLayout>
 </template>
@@ -18,9 +18,10 @@
 import MainLayout from "../layouts/TheMainLayout.vue";
 import HomeHero from "../components/HomeHero.vue";
 import AboutSection from "../components/AboutMeSection.vue";
+import AboutMeComponent from "../components/AboutMeComponent.vue";
 
 export default {
-  components: { MainLayout, HomeHero, AboutSection },
+  components: { MainLayout, AboutMeComponent, AboutSection, HomeHero },
 };
 </script>
 

@@ -72,7 +72,7 @@ export default {
 .nav-item {
   font-weight: 600;
   font-size: clamp(12px, 4vw, 16px);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   color: #fff !important;
   font-weight: 100;
   padding: 10px 0;

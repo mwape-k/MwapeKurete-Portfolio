@@ -58,7 +58,7 @@ export default {
 
 .portfolio {
   font-size: clamp(12px, 8vw, 48px);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   color: #212121;
   background-color: #d67456;
   padding: 0 2rem;
@@ -72,7 +72,7 @@ export default {
   margin-top: 12rem;
   font-size: clamp(10px, 5vw, 20px);
   color: #212121;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   background-color: #fff;
   padding: 0 3rem;
   font-weight: 200;

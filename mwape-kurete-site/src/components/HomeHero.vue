@@ -1,4 +1,5 @@
 <script>
+import CurvedLoop from "../components/vue-bits/CurvedLoop.vue";
 export default {
   name: "HomeHero",
   methods: {
@@ -9,6 +10,7 @@ export default {
       }
     },
   },
+  components: { CurvedLoop },
 };
 </script>
 
@@ -18,8 +20,14 @@ export default {
       <div class="mwape-kurete">Mwape Kurete</div>
       <div class="portfolio">Portfolio</div>
     </div>
-    <div class="explore-btn" @click="scrollToSection('about-sect')">
-      <div class="explore">Explore!!!</div>
+    <div class="banner">
+      <CurvedLoop
+        marquee-text=" Frontend ✦ Developer ✦ UX/UI ✦ Designer ✦ crafting ✦ human-centred ✦ web ✦ experiences ✦"
+        :speed="1.5"
+        :curve-amount="300"
+        direction="left"
+        :interactive="true"
+      />
     </div>
   </div>
 </template>
@@ -39,6 +47,7 @@ export default {
 }
 
 .header-container {
+  margin-top: 22rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,33 +66,27 @@ export default {
 
 .portfolio {
   font-size: clamp(24px, 8vw, 64px);
-  font-family: "Space Grotesk", sans-serif;
+  width: 400px;
+  height: 48px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Darker Grotesque", sans-serif;
   color: #212121;
-  background-color: #e9a701;
-  padding: 0 5.6rem;
+  background-color: #ff595e;
+  padding: 2rem;
   white-space: nowrap;
   margin-top: 2.5rem; /* Increase negative margin */
   transform: rotate(-5deg) translateY(-18%); /* Extra lift */
 }
 
-.explore-btn {
-  margin-top: 12rem;
-  font-size: clamp(10px, 5vw, 20px);
-  color: #212121;
-  font-family: "Space Grotesk", sans-serif;
-  background-color: #fff;
-  padding: 0 3rem;
-  font-weight: 200;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 4;
-}
-
-.explore-btn:hover {
-  background-color: rgba(233, 167, 1, 0.228);
-  color: #fff;
-
-  transform: rotate(-5deg) scale(1.05);
+.banner {
+  width: 100%;
+  bottom: 2rem;
+  margin-top: -14rem;
+  left: 0;
+  z-index: 1;
 }
 
 /* Optional tweaks for smaller screens */
@@ -91,10 +94,29 @@ export default {
   .portfolio {
     transform: rotate(-5deg) scale(0.95);
     margin-top: 1rem;
+    height: 48px;
+    width: 250px;
   }
 
   .explore-btn {
     margin-top: 10rem;
+  }
+}
+
+/* Vue's deep selector: >>> (.curved-loop-text) style for text inside CurvedLoop */
+.banner :deep(.curved-loop-text) {
+  font-size: clamp(1.4rem, 6vw, 3.6rem) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Darker Grotesque", sans-serif;
+  letter-spacing: 0.03em;
+  fill: white;
+}
+
+/* Further fine-tune for mobile */
+@media (max-width: 480px) {
+  .banner :deep(.curved-loop-text) {
+    font-size: 1.1rem;
   }
 }
 </style>

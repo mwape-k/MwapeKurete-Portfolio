@@ -233,7 +233,7 @@ export default {
   text-align: center;
   font-size: 20px;
   color: #fff;
-  font-family: "Space Grotesk";
+  font-family: "Darker Grotesque";
 }
 
 .project-card-container {
@@ -264,7 +264,7 @@ export default {
   font-size: 16px;
   color: #fff;
   line-height: 1.2;
-  font-family: "Space Grotesk";
+  font-family: "Darker Grotesque";
 }
 
 .multitudes-icon {
@@ -314,7 +314,7 @@ export default {
 
 .uiux-projects {
   text-align: center;
-  font-family: "Space Grotesk";
+  font-family: "Darker Grotesque";
   color: #212121;
   width: 100%;
   background-color: #4e8359;
@@ -322,7 +322,7 @@ export default {
 }
 
 .click-the-card {
-  font-family: "Space Grotesk";
+  font-family: "Darker Grotesque";
   font-weight: 400 !important;
   font-size: medium;
   color: #fff;

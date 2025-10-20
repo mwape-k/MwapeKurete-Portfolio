@@ -86,7 +86,7 @@ export default {
   text-align: center;
   font-size: 16px;
   color: #fff;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
@@ -102,7 +102,7 @@ export default {
 
 .some-important-links {
   position: relative;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   font-weight: 700;
   color: #212121;
   background-color: #fff;
@@ -157,7 +157,7 @@ export default {
 }
 
 .hope-to-hear {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   font-size: 28px;
   color: white;
   display: flex;
