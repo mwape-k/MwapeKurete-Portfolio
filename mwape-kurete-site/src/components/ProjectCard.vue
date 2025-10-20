@@ -1,51 +1,70 @@
 <template>
-  <div :class="$style.projectCard" :style="{ backgroundColor: bgColor }">
-    <div :class="$style.projectCardInCont">
-      <div :class="$style.projectType">
-        <div :class="$style.fullstackDevProject">{{ projectType }}</div>
-        <img :src="typeIcon" :class="$style.iconBox" alt="Type Icon" />
-      </div>
-      <div :class="$style.projectStack">
-        <div
-          v-for="(tech, idx) in projectStack"
-          :key="idx"
-          :class="$style.mongodb"
-        >
-          {{ tech }}
+  <div
+    :class="$style.projectCard"
+    :style="cardStyle"
+    @mouseenter="isHovered = true"
+    @mouseleave="isHovered = false"
+  >
+    <div :class="$style.cardContent">
+      <!-- Header Section -->
+      <div :class="$style.header">
+        <div :class="$style.projectType">
+          {{ projectType }}
         </div>
+        <span :class="$style.iconBox">
+          {{ typeIcon }}
+        </span>
       </div>
-      <div :class="$style.projectTitle">
-        <div :class="$style.projectName">
-          {{ projectTitle }}
-        </div>
-      </div>
-      <div :class="$style.projectSticker">
-        <img
-          :src="projectSticker"
-          :class="$style.peelingOffSticker"
-          alt="Sticker"
-        />
-      </div>
-      <div :class="$style.ctaSection">
-        <div :class="$style.projectDescription">
-          <div :class="$style.aSinglePage">
-            {{ projectDesc }}
+
+      <!-- Main Content Grid -->
+      <div :class="$style.contentGrid">
+        <!-- Tech Stack -->
+        <div :class="$style.techStack">
+          <div
+            v-for="(tech, idx) in projectStack"
+            :key="idx"
+            :class="$style.techItem"
+          >
+            {{ tech }}
           </div>
         </div>
-        <div :class="$style.cta" @click="onCta">
+
+        <!-- Project Title -->
+        <div :class="$style.projectTitle">
+          {{ projectTitle }}
+        </div>
+
+        <!-- Project Sticker -->
+        <div :class="$style.sticker">
           <img
-            v-if="ctaBtnIcon"
-            :src="ctaBtnIcon"
-            :class="$style.btnIcon"
-            alt="Button Icon"
+            :src="projectSticker"
+            :class="$style.stickerImage"
+            alt="Project sticker"
           />
-          <div :class="$style.projectName">{{ ctaBtnText }}</div>
-          <img
-            v-if="ctaBtnIcon"
-            :src="ctaBtnIcon"
-            :class="$style.btnIcon"
-            alt="Button Icon"
-          />
+        </div>
+
+        <!-- Description & CTA -->
+        <div :class="$style.ctaSection">
+          <div :class="$style.description">
+            {{ projectDesc }}
+          </div>
+          <button :class="$style.ctaButton" @click="onCta">
+            <img
+              v-if="ctaBtnIcon"
+              :src="ctaBtnIcon"
+              :class="$style.buttonIcon"
+              alt=""
+            />
+            <span :class="$style.buttonText">
+              {{ ctaBtnText }}
+            </span>
+            <img
+              v-if="ctaBtnIcon"
+              :src="ctaBtnIcon"
+              :class="$style.buttonIcon"
+              alt=""
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -53,7 +72,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
+import { defineProps, computed, ref, onMounted } from "vue";
 
 interface Props {
   typeIcon: string;
@@ -62,189 +81,352 @@ interface Props {
   projectTitle: string;
   projectSticker: string;
   projectDesc: string;
-  ctaBtnIcon?: string; // Make icon optional
+  ctaBtnIcon?: string;
   ctaBtnText: string;
   bgColor?: string;
   onCta?: () => void;
 }
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  bgColor: "#ff595e",
+  onCta: () => {},
+  ctaBtnIcon: undefined,
+});
 
-// Expose to template so destructuring works with CSS modules:
-const {
-  typeIcon,
-  projectType,
-  projectStack,
-  projectTitle,
-  projectSticker,
-  projectDesc,
-  ctaBtnIcon,
-  ctaBtnText,
-  bgColor = "#ff595e",
-  onCta = () => {},
-} = props;
+const rotation = ref(0);
+const isHovered = ref(false);
+
+// Generate random rotation between -3 and 3 degrees
+const generateRotation = () => {
+  return Math.random() * 6 - 3; // -3 to +3 degrees
+};
+
+onMounted(() => {
+  rotation.value = generateRotation();
+});
+
+const cardStyle = computed(() => ({
+  backgroundColor: props.bgColor,
+  transform: `rotate(${rotation.value}deg) scale(${
+    isHovered.value ? 1.02 : 1
+  })`,
+  transition: "transform 0.3s ease",
+}));
 </script>
 
-<!-- Keep your styles as is! -->
 <style module>
-/* ... styles from your original post, unchanged ... */
 .projectCard {
-  width: fit-content;
-  height: 480px;
-  position: relative;
-  border-radius: 24px;
-  background-color: #ff595e;
+  width: min(100%, 700px);
+  max-width: 700px;
+  height: fit-content;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 21px 19px;
+  padding: 16px 14px;
   box-sizing: border-box;
   text-align: center;
-  font-size: 48px;
+  font-size: 2rem;
   color: #0d0d0d;
   font-family: "Just Me Again Down Here";
-}
-.projectCardInCont {
-  width: 757px;
-  height: 430px;
-  position: relative;
-  box-sizing: border-box;
-}
-.projectType {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  margin: 0 auto;
   border: 1px solid #0d0d0d;
-  box-sizing: border-box;
-  width: 757px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  gap: 31px;
+  background-image: url(data:image/png;base64,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);
 }
-.fullstackDevProject {
-  height: 56px;
-  flex: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.iconBox {
-  height: 57px;
-  width: 57px;
-  border-radius: 8px;
-}
-.projectStack {
-  position: absolute;
-  top: 81px;
-  left: 0.5px;
-  border: 1px solid #0d0d0d;
-  box-sizing: border-box;
-  width: 241px;
-  height: 156px;
+
+.cardContent {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+
+/* Header */
+.header {
+  border: 1px solid #0d0d0d;
+  background-color: #0d0d0d;
+  color: #fff;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 24px;
-  text-align: left;
-  font-size: 24px;
+  padding: px;
+  gap: 24px;
+  width: 100%;
 }
-.mongodb {
-  align-self: stretch;
+
+.projectType {
   flex: 1;
-  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  min-height: 44px;
 }
+
+.iconBox {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* Main Content Grid */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 0;
+  flex: 1;
+  width: 100%;
+}
+
+/* Tech Stack */
+.techStack {
+  border: 1px solid #0d0d0d;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  text-align: left;
+  font-size: 1.25rem;
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+}
+
+/* Project Title */
 .projectTitle {
-  position: absolute;
-  top: 81px;
-  left: 241px;
   border: 1px solid #0d0d0d;
-  box-sizing: border-box;
-  width: 516px;
-  height: 156px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  font-size: 64px;
+  padding: 8px;
+  font-size: 4.5rem;
   font-family: Anton;
+  word-break: break-word;
 }
-.projectName {
-  position: relative;
-}
-.projectSticker {
-  position: absolute;
-  top: 237px;
-  left: 0px;
+
+/* Sticker */
+.sticker {
   border: 1px solid #0d0d0d;
-  box-sizing: border-box;
-  width: 241px;
-  height: 193px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 8px;
 }
-.peelingOffSticker {
-  height: 193px;
-  width: 195.1px;
-  position: relative;
+
+.stickerImage {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  max-height: 140px;
   object-fit: cover;
 }
+
+/* CTA Section */
 .ctaSection {
-  position: absolute;
-  top: 237px;
-  left: 241px;
   border: 1px solid #0d0d0d;
-  box-sizing: border-box;
-  width: 516px;
-  height: 193px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  gap: 10px;
-  font-size: 20px;
+  padding: 8px;
+  gap: 8px;
+  font-size: 1.1rem;
   font-family: "Darker Grotesque";
 }
-.projectDescription {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.aSinglePage {
-  height: 62px;
-  width: 353px;
-  position: relative;
+
+.description {
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  min-height: 50px;
+  line-height: 1.4;
 }
-.cta {
-  align-self: stretch;
+
+.ctaButton {
+  width: 100%;
   border-radius: 2px;
   background-color: #0d0d0d;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 24px;
-  gap: 20px;
-  font-size: 36px;
+  padding: 10px 20px;
+  gap: 16px;
+  font-size: 1.75rem;
   color: #fff;
   font-family: "Just Me Again Down Here";
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
-.btnIcon {
-  height: 24px;
-  width: 24px;
-  position: relative;
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
+
+.buttonText {
+  flex: 1;
+  text-align: center;
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Responsive Design - Scale down proportionally */
+@media (max-width: 768px) {
+  .projectCard {
+    width: min(100%, 600px);
+    height: fit-content;
+    padding: 14px 12px;
+    font-size: 1.75rem;
+  }
+
+  .header {
+    padding: 8px;
+    gap: 20px;
+  }
+
+  .projectType {
+    font-size: 1.75rem;
+    min-height: 40px;
+  }
+
+  .iconBox {
+    width: 40px;
+    height: 40px;
+  }
+
+  .techStack {
+    padding: 8px 16px;
+    font-size: 1.1rem;
+  }
+
+  .projectTitle {
+    font-size: 2.25rem;
+    padding: 6px;
+  }
+
+  .stickerImage {
+    max-width: 140px;
+    max-height: 120px;
+  }
+
+  .ctaSection {
+    padding: 6px;
+    gap: 6px;
+    font-size: 1rem;
+  }
+
+  .description {
+    min-height: 45px;
+  }
+
+  .ctaButton {
+    padding: 8px 16px;
+    font-size: 1.5rem;
+  }
+
+  .buttonIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectCard {
+    width: min(100%, 500px);
+    height: fit-content;
+    padding: 12px 10px;
+    font-size: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .header {
+    padding: 6px;
+    gap: 16px;
+  }
+
+  .projectType {
+    font-size: 1.5rem;
+    min-height: 36px;
+  }
+
+  .iconBox {
+    width: 35px;
+    height: 35px;
+  }
+
+  .techStack {
+    padding: 6px 12px;
+    font-size: 1rem;
+    gap: 4px;
+  }
+
+  .techItem {
+    min-height: 20px;
+  }
+
+  .projectTitle {
+    font-size: 2rem;
+    padding: 4px;
+  }
+
+  .stickerImage {
+    max-width: 120px;
+    max-height: 100px;
+  }
+
+  .ctaSection {
+    padding: 4px;
+    gap: 4px;
+    font-size: 0.9rem;
+  }
+
+  .description {
+    min-height: 40px;
+  }
+
+  .ctaButton {
+    padding: 6px 12px;
+    font-size: 1.25rem;
+    gap: 12px;
+  }
+
+  .buttonIcon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .projectCard {
+    width: min(100%, 450px);
+    height: fit-content;
+    padding: 10px 8px;
+    font-size: 1.25rem;
+  }
+
+  .projectType {
+    font-size: 1.25rem;
+  }
+
+  .projectTitle {
+    font-size: 1.75rem;
+  }
+
+  .ctaButton {
+    font-size: 1.1rem;
+  }
 }
 </style>

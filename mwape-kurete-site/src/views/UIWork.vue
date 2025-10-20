@@ -1,12 +1,18 @@
-<script>
+<script setup>
 import MainLayout from "../layouts/TheMainLayout.vue";
 import UIWorkHero from "../components/UIWorkHero.vue";
 import UIProjects from "../components/UIProjectHighlight.vue";
 import ProjectCard from "../components/ProjectCard.vue";
 
-export default {
-  components: { MainLayout, UIWorkHero, UIProjects, ProjectCard },
-};
+//imports for project card
+import sticker from "../assets/projects/Peeling Off Sticker-4.png";
+
+//importing logo
+import { CodeXml } from "lucide-vue-next";
+import { Paintbrush } from "lucide-vue-next";
+
+const stack01 = ["Figma", "Branding", "Design System", "Ui/Ux"];
+const handleCta = () => window.open("https://yourproject.com", "_blank");
 </script>
 <template>
   <MainLayout>
@@ -20,7 +26,17 @@ export default {
       data-aos-duration="1000"
     >
       <UIProjects />
-      <ProjectCard />
+      <ProjectCard
+        :typeIcon="typeIcon"
+        projectType="UX/UI DESIGN"
+        :projectStack="stack01"
+        projectTitle="MULTITUDES"
+        :projectSticker="sticker"
+        projectDesc="A Single Page site built for an immersive Jazz & Art Music Festival."
+        ctaBtnText="Check it Out"
+        bgColor="#ff595e"
+        :onCta="handleCta"
+      />
     </div>
   </MainLayout>
 </template>
