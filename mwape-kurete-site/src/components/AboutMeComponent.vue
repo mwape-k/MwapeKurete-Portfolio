@@ -279,4 +279,18 @@ const goToDev = () => router.push("/dev-work");
     border-color: #fff;
   }
 }
+
+/* iPad landscape header resizing: big but not overwhelming */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: landscape) {
+  .bigText {
+    font-size: clamp(178px, 8vw, 128px) !important;
+    /* Reduces excessive scaling on iPad Mini landscape */
+    line-height: 1.02;
+  }
+
+  .links {
+    scale: 0.7;
+    width: 100%;
+  }
+}
 </style>

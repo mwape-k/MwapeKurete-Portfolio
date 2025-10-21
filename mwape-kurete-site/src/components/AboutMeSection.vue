@@ -153,7 +153,7 @@ export default {
 }
 
 .bio-text {
-  font-size: clamp(16px, 2vw, 18px);
+  font-size: clamp(12px, 1.5vw, 16px);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   text-align: justify;
@@ -364,6 +364,7 @@ export default {
   }
 
   .bio-text {
+    font-size: 12px;
   }
 }
 
@@ -375,6 +376,23 @@ export default {
 
   .about-header {
     margin-bottom: 1.5rem;
+  }
+}
+
+/* iPad landscape header resizing */
+/* iPad landscape header resizing: smaller/fitting but big */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) /* covers iPad Mini landscape */ and (orientation: landscape) {
+  .a-bit-about {
+    /* Clamp between 34px and 60px, always bold but screen-fitting */
+    font-size: clamp(34px, 6.5vw, 60px);
+  }
+  .me {
+    font-size: clamp(13px, 3vw, 27px);
+    height: 2rem;
+  }
+
+  .bio-text {
+    font-size: 16px !important;
   }
 }
 </style>

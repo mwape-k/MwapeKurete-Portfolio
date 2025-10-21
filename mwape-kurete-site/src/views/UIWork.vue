@@ -152,11 +152,11 @@ const projects = [
 }
 .card-3 {
   top: 45%;
-  left: 60%;
+  right: 80%;
 }
 .card-4 {
   top: 63%;
-  left: 40%;
+  left: 50%;
 }
 
 .card-0:hover,

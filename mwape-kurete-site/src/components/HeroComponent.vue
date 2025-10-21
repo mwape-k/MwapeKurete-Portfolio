@@ -173,4 +173,18 @@ export default {
     visibility: hidden;
   }
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: landscape) {
+  .card-01 {
+    top: 4%;
+    left: 2%;
+    scale: 0.8;
+  }
+
+  .card-02 {
+    bottom: 5%;
+    right: 2%;
+    scale: 0.8;
+  }
+}
 </style>
