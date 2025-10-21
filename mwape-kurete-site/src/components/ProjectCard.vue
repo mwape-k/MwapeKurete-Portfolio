@@ -449,7 +449,6 @@ const cardStyle = computed(() => ({
 @media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (orientation: landscape) {
   .projectCard {
     height: fit-content !important;
-    min-height: 0 !important;
     max-height: none !important;
   }
 }
