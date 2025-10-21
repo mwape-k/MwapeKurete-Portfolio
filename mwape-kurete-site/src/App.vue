@@ -9,7 +9,7 @@ onMounted(() => {
     loading.value = false;
     await nextTick(); // wait until DOM updates
     window.dispatchEvent(new Event("scroll")); // triggers any scroll-based effects
-  }, 4000);
+  }, 2000);
 });
 </script>
 
