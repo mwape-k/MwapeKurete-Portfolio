@@ -75,7 +75,7 @@
 import { defineProps, computed, ref, onMounted } from "vue";
 
 interface Props {
-  typeIcon: string;
+  typeIcon?: string;
   projectType: string;
   projectStack: string[];
   projectTitle: string;
@@ -116,8 +116,9 @@ const cardStyle = computed(() => ({
 
 <style module>
 .projectCard {
-  width: min(100%, 700px);
-  max-width: 700px;
+  scale: 0.7;
+  width: min(100%, 750px);
+  max-width: 750px;
   height: fit-content;
   border-radius: 20px;
   display: flex;
@@ -132,6 +133,9 @@ const cardStyle = computed(() => ({
   font-family: "Just Me Again Down Here";
   margin: 0 auto;
   border: 1px solid #0d0d0d;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
   background-image: url(data:image/png;base64,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);
 }
 
@@ -191,7 +195,7 @@ const cardStyle = computed(() => ({
   justify-content: center;
   gap: 6px;
   text-align: left;
-  font-size: 1.25rem;
+  font-size: 1.95rem;
 }
 
 .techItem {
@@ -207,7 +211,7 @@ const cardStyle = computed(() => ({
   align-items: center;
   justify-content: center;
   padding: 8px;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-family: Anton;
   word-break: break-word;
 }
@@ -219,14 +223,22 @@ const cardStyle = computed(() => ({
   align-items: center;
   justify-content: center;
   padding: 8px;
+  /* Optionally overlap/float sticker */
+  position: relative;
+  z-index: 5;
 }
 
 .stickerImage {
-  width: 100%;
-  max-width: 160px;
-  height: auto;
-  max-height: 140px;
-  object-fit: cover;
+  width: 400px; /* Increased width */
+  max-width: 220px;
+  height: 390px; /* Increased height */
+  max-height: 220px;
+  object-fit: contain;
+  /* Optional sticker-like effects */
+  transform: rotate(-10deg);
+  /* For even more pop: */
+  margin-top: -40px;
+  margin-right: -10px;
 }
 
 /* CTA Section */
@@ -238,7 +250,7 @@ const cardStyle = computed(() => ({
   justify-content: center;
   padding: 8px;
   gap: 8px;
-  font-size: 1.1rem;
+  font-size: 1.71rem;
   font-family: "Darker Grotesque";
 }
 
@@ -298,7 +310,7 @@ const cardStyle = computed(() => ({
   }
 
   .projectType {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
     min-height: 40px;
   }
 
@@ -309,7 +321,7 @@ const cardStyle = computed(() => ({
 
   .techStack {
     padding: 8px 16px;
-    font-size: 1.1rem;
+    font-size: 2.1rem;
   }
 
   .projectTitle {
@@ -318,8 +330,9 @@ const cardStyle = computed(() => ({
   }
 
   .stickerImage {
-    max-width: 140px;
-    max-height: 120px;
+    width: 140px;
+    height: 120px;
+    margin-top: -22px;
   }
 
   .ctaSection {
@@ -369,7 +382,7 @@ const cardStyle = computed(() => ({
 
   .techStack {
     padding: 6px 12px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     gap: 4px;
   }
 
@@ -378,19 +391,21 @@ const cardStyle = computed(() => ({
   }
 
   .projectTitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 4px;
   }
 
   .stickerImage {
-    max-width: 120px;
-    max-height: 100px;
+    width: 195px;
+    height: 175px;
+    margin-top: -12px;
+    margin-left: -35px;
   }
 
   .ctaSection {
     padding: 4px;
     gap: 4px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   .description {

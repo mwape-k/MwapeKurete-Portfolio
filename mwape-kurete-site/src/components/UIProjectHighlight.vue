@@ -14,116 +14,6 @@ export default {
 
 <template>
   <div class="container-fluid main-highlights">
-    <!-- Header Section -->
-    <div class="row project-rows">
-      <div
-        class="col-12 project-cols d-flex justify-content-center align-items-center"
-      >
-        <div class="header2" data-aos="fade down">
-          <div class="some-of-my">Some of My fav</div>
-          <div class="uiux-projects">ui/ux projects</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project Cards -->
-    <div class="row project-rows">
-      <div
-        class="col-12 project-cols d-flex justify-content-center align-items-center"
-      >
-        <div class="project-cards-outer">
-          <!-- Card 1 -->
-          <div
-            class="project-card-container"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="project-header">
-              <div class="nd-year-project">2nd Year Project</div>
-              <div class="click-the-card">
-                Click the Card to view the Case Study
-              </div>
-            </div>
-            <div class="project-card">
-              <a
-                href="https://www.behance.net/gallery/225295889/Multitudes-A-Jazz-Music-Festival"
-                class="project-card-links"
-                target="_blank"
-              >
-                <img
-                  class="multitudes-icon"
-                  alt=""
-                  src="../assets/multitudes.png"
-                />
-              </a>
-              <div class="a-single-page">
-                A Single Page site built for an immersive Jazz & Art Music
-                Festival.
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            class="project-card-container"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="project-header">
-              <div class="nd-year-project">2nd Year Project</div>
-              <div class="click-the-card">
-                Click the Card to view the Case Study
-              </div>
-            </div>
-            <div class="project-card">
-              <a
-                href="https://www.behance.net/gallery/225296167/EcoFest-A-brand-activation"
-                class="project-card-links"
-                target="_blank"
-              >
-                <img
-                  class="multitudes-icon"
-                  alt=""
-                  src="../assets/ecofest.png"
-                />
-              </a>
-              <div class="a-single-page">
-                A Responsive Web Activation for an existing South African
-                company.
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="project-card-container"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="project-header">
-              <div class="nd-year-project">2nd Year Project</div>
-              <div class="click-the-card">
-                Click the Card to view the Case Study
-              </div>
-            </div>
-            <div class="project-card">
-              <a
-                href="https://www.behance.net/gallery/225296361/Recs-Discover-underground-Artists"
-                class="project-card-links"
-                target="_blank"
-              >
-                <img class="multitudes-icon" alt="" src="../assets/recs.png" />
-              </a>
-              <div class="a-single-page">
-                A Mobile app built for upcoming artists – discover your new favs
-                through genre-based recommendations.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Skillset -->
     <div class="row project-rows">
       <div class="col-12 project-cols">
@@ -153,6 +43,7 @@ export default {
 
 .project-cols {
   width: 100%;
+  margin-top: 4rem !important;
 }
 
 /* Header */
@@ -326,6 +217,7 @@ export default {
   flex-wrap: wrap;
   gap: 32px;
   justify-content: center;
+  margin-top: 4rem;
 }
 .electron img {
   width: 60px;

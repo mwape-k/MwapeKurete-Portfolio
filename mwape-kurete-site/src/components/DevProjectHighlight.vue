@@ -15,110 +15,6 @@ export default {
 <template>
   <div class="container-fluid main-highlights">
     <div class="row project-rows">
-      <div
-        class="col-12 project-cols justify-content-center align-items-center"
-      >
-        <div class="header2" data-aos="fade down">
-          <div class="some-of-my">Some of My favs</div>
-          <div class="uiux-projects">Dev projects</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row project-rows">
-      <div
-        class="col-12 project-cols justify-content-center align-items-center"
-      >
-        <div class="project-cards-outer">
-          <div
-            class="project-card-container"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="project-header">
-              <div class="nd-year-project">2nd Year Project</div>
-              <div class="click-the-card">
-                Click the Card to view the GitHub Repo
-              </div>
-            </div>
-            <div class="project-card">
-              <a
-                href="https://github.com/Mwape-Kurete/STAXS_T1P1"
-                class="project-link"
-                target="_blank"
-              >
-                <img class="multitudes-icon" alt="" src="../assets/staxs.jpg" />
-              </a>
-              <div class="a-single-page">
-                A website that let users view stats on their favourite artists’
-                top ten tracks, and compare artist stats against one another.
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="project-card-container"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="project-header">
-              <div class="nd-year-project">2nd Year Project</div>
-              <div class="click-the-card">
-                Click the Card to view the GitHub Repo
-              </div>
-            </div>
-            <div class="project-card">
-              <a
-                href="https://github.com/Mwape-Kurete/ADDI"
-                class="project-link"
-                target="_blank"
-              >
-                <img class="multitudes-icon" alt="" src="../assets/addi.jpg" />
-              </a>
-              <div class="a-responsive-web-container">
-                <p class="a-responsive-web">
-                  A website built for extroverts. ADDI lets users post about,
-                  review/comment, and find events happening in their area.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="project-card-container"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="project-header">
-              <div class="nd-year-project">2nd Year Project</div>
-              <div class="click-the-card">
-                Click the Card to view the GitHub Repo
-              </div>
-            </div>
-            <div class="project-card">
-              <a
-                href="https://github.com/Mwape-Kurete/Rekeni"
-                class="project-link"
-                target="_blank"
-              >
-                <img
-                  class="multitudes-icon"
-                  alt=""
-                  src="../assets/rekeni.jpg"
-                />
-              </a>
-              <div class="a-single-page">
-                REKENI is a website that connects music lovers through album
-                recommendations & reviews. Discover new artists based on taste
-                through a dynamic content-based filtering algorithm.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row project-rows">
       <div class="col-12 project-cols">
         <div class="skillset-ux" data-aos="zoom-in-up">
           <div class="my-skillset">My Skillset</div>
@@ -202,6 +98,7 @@ export default {
 
 .project-cols {
   width: 100%;
+  margin-top: 8rem !important;
 }
 
 /* Header */
