@@ -1,6 +1,74 @@
 <script>
+import CircularGallery from "../components/vue-bits/CircleGallery.vue";
+
+import electron from "../assets/electron.svg";
+import docker from "../assets/docker.svg";
+import mysql from "../assets/mysql.svg";
+import php from "../assets/php.svg";
+import csharp from "../assets/c-sharp.svg";
+import js from "../assets/js.svg";
+import html5 from "../assets/html5.svg";
+import bootstrap from "../assets/bootstrap.svg";
+import git from "../assets/git.svg";
+import mongo from "../assets/mongo.svg";
+import vite from "../assets/vite.svg";
+import react from "../assets/react.svg";
+import vs from "../assets/vs.svg";
+import npm from "../assets/npm.svg";
+import jquery from "../assets/jquery.svg";
+import css from "../assets/css.svg";
+import figma from "../assets/figma.svg";
+import vue from "../assets/vue.svg";
+import node from "../assets/node.svg";
+
 export default {
   name: "DevProjectHighlight",
+  components: { CircularGallery },
+  data() {
+    const logos = [
+      { image: electron, text: "Electron" },
+      { image: docker, text: "Docker" },
+      { image: mysql, text: "MySQL" },
+      { image: php, text: "PHP" },
+      { image: csharp, text: "C-Sharp" },
+      { image: js, text: "JavaScript" },
+      { image: html5, text: "HTML5" },
+      { image: bootstrap, text: "Bootstrap" },
+      { image: git, text: "GitHub" },
+      { image: mongo, text: "Mongo" },
+      { image: vite, text: "Vite" },
+      { image: react, text: "React" },
+      { image: vs, text: "VS" },
+      { image: npm, text: "NPM" },
+      { image: jquery, text: "JQuery" },
+      { image: css, text: "CSS" },
+      { image: figma, text: "Figma" },
+      { image: vue, text: "Vue" },
+      { image: node, text: "Node" },
+    ];
+    return {
+      electron,
+      docker,
+      mysql,
+      php,
+      csharp,
+      js,
+      html5,
+      bootstrap,
+      git,
+      mongo,
+      vite,
+      react,
+      vs,
+      npm,
+      jquery,
+      css,
+      figma,
+      vue,
+      node,
+      logos,
+    };
+  },
   methods: {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);

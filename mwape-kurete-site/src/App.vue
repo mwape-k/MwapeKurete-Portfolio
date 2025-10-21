@@ -21,9 +21,11 @@ onMounted(() => {
     </transition>
 
     <!-- Main App -->
-    <transition name="zoom-fade" mode="out-in" appear>
-      <router-view v-if="!loading" :key="$route.fullPath" />
-    </transition>
+    <router-view v-slot="{ Component }">
+      <transition name="zoom-fade" mode="out-in" appear>
+        <component v-if="!loading" :is="Component" :key="$route.fullPath" />
+      </transition>
+    </router-view>
   </div>
 </template>
 

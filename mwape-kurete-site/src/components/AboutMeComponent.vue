@@ -48,7 +48,7 @@
   </section>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { useRouter } from "vue-router";
 import profileImg from "../assets/personal/profile-img.jpeg";
 import uxWork from "../assets/personal/ux-work-badge.svg";
