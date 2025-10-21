@@ -116,7 +116,6 @@ const cardStyle = computed(() => ({
 
 <style module>
 .projectCard {
-  scale: 0.7;
   width: min(100%, 750px);
   max-width: 750px;
   height: fit-content;
