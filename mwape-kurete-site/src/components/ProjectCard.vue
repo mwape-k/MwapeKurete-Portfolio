@@ -448,8 +448,10 @@ const cardStyle = computed(() => ({
 /* iPad landscape mode: make height fit content */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (orientation: landscape) {
   .projectCard {
+    width: min(100%, 450px);
     height: fit-content !important;
-    max-height: none !important;
+    min-height: fit-content !important;
+    max-height: fit-content !important;
   }
 }
 </style>
